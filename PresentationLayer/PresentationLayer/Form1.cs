@@ -78,16 +78,28 @@ namespace PresentationLayer
             }
         }
         public static RegistrationForm registrationForm = new RegistrationForm() { Dock = DockStyle.Fill, TopLevel = false, TopMost = true };
+        public static LogInForm loginForm = new LogInForm() { Dock = DockStyle.Fill, TopLevel = false, TopMost = true };
         private void bunifuFlatButtonRegister_Click(object sender, EventArgs e)
         {
             panelForms.Visible = true;
             this.panelForms.Controls.Add(registrationForm);
-            labelMainFormText.Visible = false;
+            loginForm.Visible = false;
             registrationForm.Show();
+            labelMainFormText.Visible = false;
             label2MainForm.Visible = false;
             label3MainForm.Visible = false;
         }
 
-        
+        private void bunifuFlatButtonLogIn_Click(object sender, EventArgs e)
+        {
+            panelForms.Visible = true;
+            this.panelForms.Controls.Add(loginForm);
+            registrationForm.Visible = false;
+            loginForm.Show();
+            labelMainFormText.Visible = false;
+            label2MainForm.Visible = false;
+            label3MainForm.Visible = false;
+
+        }
     }
 }
