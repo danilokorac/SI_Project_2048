@@ -16,6 +16,10 @@ namespace PresentationLayer
         {
             InitializeComponent();
         }
+        private void MainForm_Load(object sender, EventArgs e)
+        {
+            panelForms.Visible = false;
+        }
         private void NavbarTop_MouseMove(object sender, MouseEventArgs e)
         {
             if(e.Button == MouseButtons.Left)
@@ -72,6 +76,16 @@ namespace PresentationLayer
                 LineSidebar.Width = 252;
                 AnimationSidebarBack.Show(Sidebar);
             }
+        }
+        public static RegistrationForm registrationForm = new RegistrationForm() { Dock = DockStyle.Fill, TopLevel = false, TopMost = true };
+        private void bunifuFlatButtonRegister_Click(object sender, EventArgs e)
+        {
+            panelForms.Visible = true;
+            this.panelForms.Controls.Add(registrationForm);
+            labelMainFormText.Visible = false;
+            registrationForm.Show();
+            label2MainForm.Visible = false;
+            label3MainForm.Visible = false;
         }
 
         
