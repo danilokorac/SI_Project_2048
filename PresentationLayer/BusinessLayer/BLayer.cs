@@ -7,7 +7,8 @@ namespace BusinessLayer
 {
     public class BLayer
     {
-        public readonly PlayerRepository pr;
+        private readonly PlayerRepository pr;
+        
 
         public BLayer()
         {

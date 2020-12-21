@@ -1,4 +1,6 @@
-﻿using System;
+﻿using BusinessLayer;
+using DataAccessLayer.Models;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,9 +14,11 @@ namespace PresentationLayer
 {
     public partial class RegistrationForm : Form
     {
+        private readonly BLayer bl;
         public RegistrationForm()
         {
             InitializeComponent();
+            bl = new BLayer();
         }
 
         private void txtUsername(object sender, EventArgs e)
@@ -44,6 +48,24 @@ namespace PresentationLayer
 
             if (String.IsNullOrEmpty(bunifuTextboxIGN.text))
                 bunifuTextboxIGN.text = "IGN (In Game Name)";
+        }
+
+        private void RegistrationForm_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void bunifuThinButtonSignUp_Click(object sender, EventArgs e)
+        {
+            Player pl = new Player();
+            pl.Username = bunifuTextboxUsername.text;
+            pl.Password = bunifuTextboxPassword.text;
+            pl.InGameName = bunifuTextboxIGN.text;
+
+            if (bl.InsertNewPlayer(pl))
+                MessageBox.Show("Player is inserted in DB"); 
+            else
+                MessageBox.Show("Error something went wrong");
         }
     }
 }
