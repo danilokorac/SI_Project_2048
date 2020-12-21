@@ -1,4 +1,5 @@
-﻿using System;
+﻿using BusinessLayer;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,9 +13,12 @@ namespace PresentationLayer
 {
     public partial class LogInForm : Form
     {
+        private readonly BLayer bl;
+
         public LogInForm()
         {
             InitializeComponent();
+            bl = new BLayer();
         }
 
         private void txtLogIn(object sender, EventArgs e)
@@ -37,6 +41,26 @@ namespace PresentationLayer
         {
             if (String.IsNullOrEmpty(bunifuTextboxPasswordLogIn.text))
                 bunifuTextboxPasswordLogIn.text = "Password";
+        }
+
+        private void LogInForm_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void bunifuThinButtonLogIn_Click(object sender, EventArgs e)
+        {
+            string username = bunifuTextboxUsernameLogIn.text;
+            string password = bunifuTextboxPasswordLogIn.text;
+
+            if (bl.PlayerLogIn(username, password))
+            {
+                MessageBox.Show("Player username: "+bl.getPlayer().Username +"\n"+ "Player Password: " + bl.getPlayer().Password + "\n"+"Player IGN: " + bl.getPlayer().InGameName);
+            }
+            else
+            {
+                MessageBox.Show("Player not found");
+            }
         }
     }
 }
