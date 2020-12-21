@@ -1,5 +1,7 @@
 ﻿using DataAccessLayer;
+using DataAccessLayer.Models;
 using System;
+using System.Collections.Generic;
 
 namespace BusinessLayer
 {
@@ -10,6 +12,18 @@ namespace BusinessLayer
         public BLayer()
         {
             pr = new PlayerRepository();
+        }
+
+        public List<Player> GetPlayerList()
+        {
+            return pr.GetAllPlayers();
+        }
+
+        public bool InsertNewPlayer(Player pl)
+        {
+            if (pr.InsertPlayer(pl) > 0)
+                return true;
+            return false;
         }
     }
 }
