@@ -33,11 +33,16 @@ namespace PresentationLayer
         private void txtPassword(object sender, EventArgs e)
         {
             bunifuTextboxPassword.text = "";
+            bunifuTextboxPassword._TextBox.PasswordChar = '*';
         }
         private void leavePassword(object sender, EventArgs e)
         {
             if (String.IsNullOrEmpty(bunifuTextboxPassword.text))
+            {
                 bunifuTextboxPassword.text = "Password";
+                bunifuTextboxPassword._TextBox.PasswordChar = '*';
+            }
+                
         }
         private void txtIGN(object sender, EventArgs e)
         {
