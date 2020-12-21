@@ -35,12 +35,20 @@ namespace PresentationLayer
         private void passLogIn(object sender, EventArgs e)
         {
             bunifuTextboxPasswordLogIn.text = "";
+            bunifuTextboxPasswordLogIn._TextBox.PasswordChar = '*';
+            
         }
 
         private void leavepassLogIn(object sender, EventArgs e)
         {
             if (String.IsNullOrEmpty(bunifuTextboxPasswordLogIn.text))
+            {
                 bunifuTextboxPasswordLogIn.text = "Password";
+                bunifuTextboxPasswordLogIn._TextBox.PasswordChar = '*';
+
+            }
+                
+
         }
 
         private void LogInForm_Load(object sender, EventArgs e)
@@ -55,12 +63,14 @@ namespace PresentationLayer
 
             if (bl.PlayerLogIn(username, password))
             {
-                MessageBox.Show("Player username: "+bl.getPlayer().Username +"\n"+ "Player Password: " + bl.getPlayer().Password + "\n"+"Player IGN: " + bl.getPlayer().InGameName);
+                MessageBox.Show("You have successfully logged in!");
+
             }
             else
             {
-                MessageBox.Show("Player not found");
+                MessageBox.Show("Player not found, please register first!");
             }
         }
+
     }
 }
