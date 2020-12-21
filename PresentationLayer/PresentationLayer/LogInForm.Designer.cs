@@ -48,7 +48,7 @@
             this.bunifuThinButtonLogIn.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bunifuThinButtonLogIn.BackgroundImage")));
             this.bunifuThinButtonLogIn.ButtonText = "LOGIN";
             this.bunifuThinButtonLogIn.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.bunifuThinButtonLogIn.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bunifuThinButtonLogIn.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bunifuThinButtonLogIn.ForeColor = System.Drawing.Color.White;
             this.bunifuThinButtonLogIn.IdleBorderThickness = 1;
             this.bunifuThinButtonLogIn.IdleCornerRadius = 20;
@@ -61,13 +61,14 @@
             this.bunifuThinButtonLogIn.Size = new System.Drawing.Size(128, 49);
             this.bunifuThinButtonLogIn.TabIndex = 20;
             this.bunifuThinButtonLogIn.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.bunifuThinButtonLogIn.Click += new System.EventHandler(this.bunifuThinButtonLogIn_Click);
             // 
             // bunifuTextboxPasswordLogIn
             // 
             this.bunifuTextboxPasswordLogIn.BackColor = System.Drawing.Color.Silver;
             this.bunifuTextboxPasswordLogIn.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bunifuTextboxPasswordLogIn.BackgroundImage")));
             this.bunifuTextboxPasswordLogIn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.bunifuTextboxPasswordLogIn.Font = new System.Drawing.Font("Nirmala UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bunifuTextboxPasswordLogIn.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bunifuTextboxPasswordLogIn.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(165)))), ((int)(((byte)(21)))), ((int)(((byte)(80)))));
             this.bunifuTextboxPasswordLogIn.Icon = ((System.Drawing.Image)(resources.GetObject("bunifuTextboxPasswordLogIn.Icon")));
             this.bunifuTextboxPasswordLogIn.Location = new System.Drawing.Point(373, 454);
@@ -83,7 +84,7 @@
             this.bunifuTextboxUsernameLogIn.BackColor = System.Drawing.Color.Silver;
             this.bunifuTextboxUsernameLogIn.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bunifuTextboxUsernameLogIn.BackgroundImage")));
             this.bunifuTextboxUsernameLogIn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.bunifuTextboxUsernameLogIn.Font = new System.Drawing.Font("Nirmala UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bunifuTextboxUsernameLogIn.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bunifuTextboxUsernameLogIn.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(165)))), ((int)(((byte)(21)))), ((int)(((byte)(80)))));
             this.bunifuTextboxUsernameLogIn.Icon = ((System.Drawing.Image)(resources.GetObject("bunifuTextboxUsernameLogIn.Icon")));
             this.bunifuTextboxUsernameLogIn.Location = new System.Drawing.Point(373, 386);
@@ -100,7 +101,7 @@
             this.bunifuTileButtonRegister.color = System.Drawing.Color.FromArgb(((int)(((byte)(165)))), ((int)(((byte)(21)))), ((int)(((byte)(80)))));
             this.bunifuTileButtonRegister.colorActive = System.Drawing.Color.FromArgb(((int)(((byte)(165)))), ((int)(((byte)(21)))), ((int)(((byte)(80)))));
             this.bunifuTileButtonRegister.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.bunifuTileButtonRegister.Font = new System.Drawing.Font("Century Gothic", 15.75F);
+            this.bunifuTileButtonRegister.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F);
             this.bunifuTileButtonRegister.ForeColor = System.Drawing.Color.White;
             this.bunifuTileButtonRegister.Image = ((System.Drawing.Image)(resources.GetObject("bunifuTileButtonRegister.Image")));
             this.bunifuTileButtonRegister.ImagePosition = 40;
@@ -132,11 +133,11 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.labelLogIn.AutoSize = true;
             this.labelLogIn.BackColor = System.Drawing.Color.Transparent;
-            this.labelLogIn.Font = new System.Drawing.Font("Nirmala UI", 20.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelLogIn.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelLogIn.ForeColor = System.Drawing.Color.White;
             this.labelLogIn.Location = new System.Drawing.Point(314, 283);
             this.labelLogIn.Name = "labelLogIn";
-            this.labelLogIn.Size = new System.Drawing.Size(403, 37);
+            this.labelLogIn.Size = new System.Drawing.Size(405, 31);
             this.labelLogIn.TabIndex = 14;
             this.labelLogIn.Text = "Get Started From Login Below";
             // 
@@ -156,6 +157,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "LogInForm";
             this.Text = "LogInForm";
+            this.Load += new System.EventHandler(this.LogInForm_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
