@@ -9,7 +9,14 @@ namespace BusinessLayer
     {
         private int[,] GameBoard = { { 0, 0, 0, 0 }, { 0, 0, 0, 0 }, { 0, 0, 0, 0 }, { 0, 0, 0, 0 } };
         private bool isMoved = true;
+        public int moveCounter { get; set; }
+        public int Score { get; set; }
 
+        public GameMechanics()
+        {
+            moveCounter = 0;
+            Score = 0;
+        }
         private void randomGenerator()
         {
             int i, j, random;
@@ -48,6 +55,12 @@ namespace BusinessLayer
             return true;
         }
 
+        private void countMovies()
+        {
+            if (isMoved)
+                moveCounter++;
+        }
+
         public void moveLeft()
         {
             for (int i = 0; i < 4; i++)
@@ -62,6 +75,7 @@ namespace BusinessLayer
                             {
                                 GameBoard[i, j] += GameBoard[i, k];
                                 GameBoard[i, k] = 0;
+                                Score += GameBoard[i, j];
                                 isMoved = true;
                                 break;
                             }
@@ -92,7 +106,7 @@ namespace BusinessLayer
                     }
                 }
             }
-
+            countMovies();
             randomGenerator();
         }
 
@@ -110,6 +124,7 @@ namespace BusinessLayer
                             {
                                 GameBoard[i, j] += GameBoard[i, k];
                                 GameBoard[i, k] = 0;
+                                Score += GameBoard[i, j];
                                 isMoved = true;
                                 break;
                             }
@@ -140,7 +155,7 @@ namespace BusinessLayer
                     }
                 }
             }
-
+            countMovies();
             randomGenerator();
         }
 
@@ -188,7 +203,7 @@ namespace BusinessLayer
                     }
                 }
             }
-
+            countMovies();
             randomGenerator();
         }
         public void moveDown()
@@ -235,7 +250,7 @@ namespace BusinessLayer
                     }
                 }
             }
-
+            countMovies();
             randomGenerator();
         }
     }
