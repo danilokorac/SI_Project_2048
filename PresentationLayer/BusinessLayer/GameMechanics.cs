@@ -8,7 +8,7 @@ namespace BusinessLayer
     class GameMechanics
     {
         private int[,] GameBoard = { { 0, 0, 0, 0 }, { 0, 0, 0, 0 }, { 0, 0, 0, 0 }, { 0, 0, 0, 0 } };
-
+        private bool isMoved = true;
 
         private void randomGenerator()
         {
@@ -17,7 +17,7 @@ namespace BusinessLayer
             i = r.Next(4);
             j = r.Next(4);
 
-            if (!isBoardFull())
+            if (!isBoardFull() && isMoved)
             {
 
                 while (GameBoard[i, j] != 0)
@@ -31,6 +31,7 @@ namespace BusinessLayer
                 else
                     GameBoard[i, j] = 2;
 
+                isMoved = false;
             }
         }
 
@@ -61,6 +62,7 @@ namespace BusinessLayer
                             {
                                 GameBoard[i, j] += GameBoard[i, k];
                                 GameBoard[i, k] = 0;
+                                isMoved = true;
                                 break;
                             }
                             else if (GameBoard[i, k] == 0)
@@ -84,6 +86,7 @@ namespace BusinessLayer
                             {
                                 GameBoard[i, k - 1] = GameBoard[i, k];
                                 GameBoard[i, k] = 0;
+                                isMoved = true;
                             }
                         }
                     }
@@ -107,6 +110,7 @@ namespace BusinessLayer
                             {
                                 GameBoard[i, j] += GameBoard[i, k];
                                 GameBoard[i, k] = 0;
+                                isMoved = true;
                                 break;
                             }
                             else if (GameBoard[i, k] == 0)
@@ -130,6 +134,102 @@ namespace BusinessLayer
                             {
                                 GameBoard[i, k + 1] = GameBoard[i, k];
                                 GameBoard[i, k] = 0;
+                                isMoved = true;
+                            }
+                        }
+                    }
+                }
+            }
+
+            randomGenerator();
+        }
+
+        public void moveUp()
+        {
+            for (int i = 0; i < 4; i++)
+            {
+                for (int j = 0; j < 4; j++)
+                {
+                    if (GameBoard[j, i] != 0)
+                    {
+                        for (int k = j + 1; k < 4; k++)
+                        {
+                            if (GameBoard[j, i] == GameBoard[k, i])
+                            {
+                                GameBoard[j, i] += GameBoard[k, i];
+                                GameBoard[j, i] = 0;
+                                isMoved = true;
+                                break;
+                            }
+                            else if (GameBoard[k, i] == 0)
+                                continue;
+                            else if (GameBoard[j, i] != GameBoard[k, i])
+                                break;
+                        }
+                    }
+                }
+            }
+
+            for (int i = 0; i < 4; i++)
+            {
+                for (int j = 0; j < 4; j++)
+                {
+                    if (GameBoard[j, i] != 0)
+                    {
+                        for (int k = j; k > 0; k--)
+                        {
+                            if (GameBoard[k - 1, i] == 0)
+                            {
+                                GameBoard[k - 1, i] = GameBoard[k,i];
+                                GameBoard[k,i] = 0;
+                                isMoved = true;
+                            }
+                        }
+                    }
+                }
+            }
+
+            randomGenerator();
+        }
+        public void moveDown()
+        {
+            for (int i = 0; i < 4; i++)
+            {
+                for (int j = 3; j >= 0; j--)
+                {
+                    if (GameBoard[j, i] != 0)
+                    {
+                        for (int k = j - 1; k >= 0; k--)
+                        {
+                            if (GameBoard[j, i] == GameBoard[k, i])
+                            {
+                                GameBoard[j, i] += GameBoard[k, i];
+                                GameBoard[k, i] = 0;
+                                isMoved = true;
+                                break;
+                            }
+                            else if (GameBoard[k, i] == 0)
+                                continue;
+                            else if (GameBoard[j, i] != GameBoard[k, i])
+                                break;
+                        }
+                    }
+                }
+            }
+
+            for (int i = 0; i < 4; i++)
+            {
+                for (int j = 3; j >= 0; j--)
+                {
+                    if (GameBoard[j, i] != 0)
+                    {
+                        for (int k = j; k < 3; k++)
+                        {
+                            if (GameBoard[k + 1, i] == 0)
+                            {
+                                GameBoard[k + 1, i] = GameBoard[k, i];
+                                GameBoard[k, i] = 0;
+                                isMoved = true;
                             }
                         }
                     }
