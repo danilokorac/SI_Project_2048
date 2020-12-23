@@ -19,7 +19,7 @@ namespace BusinessLayer
         {
             for(int i = 0; i < pr.GetAllPlayers().Count; i++)
             {
-                if (pr.GetAllPlayers()[i].Username == username && pr.GetAllPlayers()[i].Username == password)
+                if (pr.GetAllPlayers()[i].Username == username && pr.GetAllPlayers()[i].Password == password)
                 {
                     p.PlayerID = pr.GetAllPlayers()[i].PlayerID;
                     p.Username = pr.GetAllPlayers()[i].Username;
