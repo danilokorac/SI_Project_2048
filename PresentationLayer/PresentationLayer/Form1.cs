@@ -1,4 +1,5 @@
-﻿using System;
+﻿using BusinessLayer;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -13,8 +14,10 @@ namespace PresentationLayer
 {
     public partial class MainForm : Form
     {
+        private readonly BLayer b1;
         public MainForm()
         {
+            this.b1 = new BLayer();
             InitializeComponent();
         }
         private void MainForm_Load(object sender, EventArgs e)
