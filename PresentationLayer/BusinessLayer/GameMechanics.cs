@@ -5,9 +5,9 @@ using System.Text;
 namespace BusinessLayer
 {
 
-    class GameMechanics
+    public class GameMechanics
     {
-        private int[,] GameBoard = { { 0, 0, 0, 0 }, { 0, 0, 0, 0 }, { 0, 0, 0, 0 }, { 0, 0, 0, 0 } };
+        public int[,] GameBoard = { { 0, 0, 0, 0 }, { 0, 0, 0, 0 }, { 0, 0, 0, 0 }, { 0, 0, 0, 0 } };
         private bool isMoved = true;
         public int moveCounter { get; set; }
         public int Score { get; set; }
@@ -17,7 +17,7 @@ namespace BusinessLayer
             moveCounter = 0;
             Score = 0;
         }
-        private void randomGenerator()
+        public void randomGenerator()
         {
             int i, j, random;
             Random r = new Random();
@@ -172,7 +172,8 @@ namespace BusinessLayer
                             if (GameBoard[j, i] == GameBoard[k, i])
                             {
                                 GameBoard[j, i] += GameBoard[k, i];
-                                GameBoard[j, i] = 0;
+                                GameBoard[k, i] = 0;
+                                Score += GameBoard[j, i];
                                 isMoved = true;
                                 break;
                             }
@@ -220,6 +221,7 @@ namespace BusinessLayer
                             {
                                 GameBoard[j, i] += GameBoard[k, i];
                                 GameBoard[k, i] = 0;
+                                Score += GameBoard[j, i];
                                 isMoved = true;
                                 break;
                             }

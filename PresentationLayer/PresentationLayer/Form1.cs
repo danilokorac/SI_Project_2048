@@ -88,6 +88,7 @@ namespace PresentationLayer
             panelForms.Visible = true;
             this.panelForms.Controls.Add(registrationForm);
             loginForm.Visible = false;
+            playGame.Visible = false;
             registrationForm.Show();
             labelMainFormText.Visible = false;
             label2MainForm.Visible = false;
@@ -99,7 +100,21 @@ namespace PresentationLayer
             panelForms.Visible = true;
             this.panelForms.Controls.Add(loginForm);
             registrationForm.Visible = false;
+            playGame.Visible = false;
             loginForm.Show();
+            labelMainFormText.Visible = false;
+            label2MainForm.Visible = false;
+            label3MainForm.Visible = false;
+
+        }
+        public static Game playGame = new Game() { Dock = DockStyle.Fill, TopLevel = false, TopMost = true };
+        private void bunifuFlatButton1_Click(object sender, EventArgs e)
+        {
+            panelForms.Visible = true;
+            this.panelForms.Controls.Add(playGame);
+            registrationForm.Visible = false;
+            loginForm.Visible = false;
+            playGame.Show();
             labelMainFormText.Visible = false;
             label2MainForm.Visible = false;
             label3MainForm.Visible = false;
