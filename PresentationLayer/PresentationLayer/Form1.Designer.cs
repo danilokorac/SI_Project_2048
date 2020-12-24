@@ -29,9 +29,9 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            BunifuAnimatorNS.Animation animation1 = new BunifuAnimatorNS.Animation();
+            BunifuAnimatorNS.Animation animation6 = new BunifuAnimatorNS.Animation();
+            BunifuAnimatorNS.Animation animation5 = new BunifuAnimatorNS.Animation();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
-            BunifuAnimatorNS.Animation animation2 = new BunifuAnimatorNS.Animation();
             this.NavbarTop = new System.Windows.Forms.Panel();
             this.NormalForm = new System.Windows.Forms.PictureBox();
             this.MinimizeForm = new System.Windows.Forms.PictureBox();
@@ -41,17 +41,18 @@
             this.MenuSidebar = new System.Windows.Forms.PictureBox();
             this.SideWrapper = new System.Windows.Forms.Panel();
             this.Sidebar = new Bunifu.Framework.UI.BunifuGradientPanel();
+            this.bunifuFlatButtonGame = new Bunifu.Framework.UI.BunifuFlatButton();
+            this.bunifuFlatButtonLogIn = new Bunifu.Framework.UI.BunifuFlatButton();
+            this.bunifuFlatButtonRegister = new Bunifu.Framework.UI.BunifuFlatButton();
             this.LineSidebar = new Bunifu.Framework.UI.BunifuSeparator();
             this.Wrapper = new System.Windows.Forms.Panel();
-            this.bunifuFlatButtonRegister = new Bunifu.Framework.UI.BunifuFlatButton();
-            this.bunifuFlatButtonLogIn = new Bunifu.Framework.UI.BunifuFlatButton();
+            this.panelForms = new System.Windows.Forms.Panel();
+            this.label3MainForm = new System.Windows.Forms.Label();
+            this.label2MainForm = new System.Windows.Forms.Label();
+            this.labelMainFormText = new System.Windows.Forms.Label();
             this.bunifuElipseCurveSidebar = new Bunifu.Framework.UI.BunifuElipse(this.components);
             this.AnimationSidebar = new BunifuAnimatorNS.BunifuTransition(this.components);
             this.AnimationSidebarBack = new BunifuAnimatorNS.BunifuTransition(this.components);
-            this.labelMainFormText = new System.Windows.Forms.Label();
-            this.label2MainForm = new System.Windows.Forms.Label();
-            this.label3MainForm = new System.Windows.Forms.Label();
-            this.panelForms = new System.Windows.Forms.Panel();
             this.NavbarTop.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.NormalForm)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.MinimizeForm)).BeginInit();
@@ -184,6 +185,7 @@
             | System.Windows.Forms.AnchorStyles.Left)));
             this.Sidebar.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("Sidebar.BackgroundImage")));
             this.Sidebar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.Sidebar.Controls.Add(this.bunifuFlatButtonGame);
             this.Sidebar.Controls.Add(this.bunifuFlatButtonLogIn);
             this.Sidebar.Controls.Add(this.bunifuFlatButtonRegister);
             this.Sidebar.Controls.Add(this.LineSidebar);
@@ -199,34 +201,79 @@
             this.Sidebar.Size = new System.Drawing.Size(270, 784);
             this.Sidebar.TabIndex = 0;
             // 
-            // LineSidebar
+            // bunifuFlatButtonGame
             // 
-            this.LineSidebar.BackColor = System.Drawing.Color.Transparent;
-            this.AnimationSidebarBack.SetDecoration(this.LineSidebar, BunifuAnimatorNS.DecorationType.None);
-            this.AnimationSidebar.SetDecoration(this.LineSidebar, BunifuAnimatorNS.DecorationType.None);
-            this.LineSidebar.LineColor = System.Drawing.Color.White;
-            this.LineSidebar.LineThickness = 1;
-            this.LineSidebar.Location = new System.Drawing.Point(10, 94);
-            this.LineSidebar.Name = "LineSidebar";
-            this.LineSidebar.Size = new System.Drawing.Size(252, 1);
-            this.LineSidebar.TabIndex = 0;
-            this.LineSidebar.Transparency = 255;
-            this.LineSidebar.Vertical = false;
+            this.bunifuFlatButtonGame.Activecolor = System.Drawing.Color.Transparent;
+            this.bunifuFlatButtonGame.BackColor = System.Drawing.Color.Transparent;
+            this.bunifuFlatButtonGame.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.bunifuFlatButtonGame.BorderRadius = 0;
+            this.bunifuFlatButtonGame.ButtonText = "       PLAY";
+            this.bunifuFlatButtonGame.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.AnimationSidebar.SetDecoration(this.bunifuFlatButtonGame, BunifuAnimatorNS.DecorationType.None);
+            this.AnimationSidebarBack.SetDecoration(this.bunifuFlatButtonGame, BunifuAnimatorNS.DecorationType.None);
+            this.bunifuFlatButtonGame.DisabledColor = System.Drawing.Color.Gray;
+            this.bunifuFlatButtonGame.Iconcolor = System.Drawing.Color.Transparent;
+            this.bunifuFlatButtonGame.Iconimage = ((System.Drawing.Image)(resources.GetObject("bunifuFlatButtonGame.Iconimage")));
+            this.bunifuFlatButtonGame.Iconimage_right = null;
+            this.bunifuFlatButtonGame.Iconimage_right_Selected = null;
+            this.bunifuFlatButtonGame.Iconimage_Selected = null;
+            this.bunifuFlatButtonGame.IconMarginLeft = 0;
+            this.bunifuFlatButtonGame.IconMarginRight = 0;
+            this.bunifuFlatButtonGame.IconRightVisible = true;
+            this.bunifuFlatButtonGame.IconRightZoom = 0D;
+            this.bunifuFlatButtonGame.IconVisible = true;
+            this.bunifuFlatButtonGame.IconZoom = 50D;
+            this.bunifuFlatButtonGame.IsTab = false;
+            this.bunifuFlatButtonGame.Location = new System.Drawing.Point(8, 249);
+            this.bunifuFlatButtonGame.Name = "bunifuFlatButtonGame";
+            this.bunifuFlatButtonGame.Normalcolor = System.Drawing.Color.Transparent;
+            this.bunifuFlatButtonGame.OnHovercolor = System.Drawing.Color.Transparent;
+            this.bunifuFlatButtonGame.OnHoverTextColor = System.Drawing.Color.White;
+            this.bunifuFlatButtonGame.selected = false;
+            this.bunifuFlatButtonGame.Size = new System.Drawing.Size(254, 48);
+            this.bunifuFlatButtonGame.TabIndex = 4;
+            this.bunifuFlatButtonGame.Text = "       PLAY";
+            this.bunifuFlatButtonGame.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.bunifuFlatButtonGame.Textcolor = System.Drawing.Color.LightGray;
+            this.bunifuFlatButtonGame.TextFont = new System.Drawing.Font("Nirmala UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bunifuFlatButtonGame.Click += new System.EventHandler(this.bunifuFlatButton1_Click);
             // 
-            // Wrapper
+            // bunifuFlatButtonLogIn
             // 
-            this.Wrapper.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(46)))));
-            this.Wrapper.Controls.Add(this.panelForms);
-            this.Wrapper.Controls.Add(this.label3MainForm);
-            this.Wrapper.Controls.Add(this.label2MainForm);
-            this.Wrapper.Controls.Add(this.labelMainFormText);
-            this.AnimationSidebarBack.SetDecoration(this.Wrapper, BunifuAnimatorNS.DecorationType.None);
-            this.AnimationSidebar.SetDecoration(this.Wrapper, BunifuAnimatorNS.DecorationType.None);
-            this.Wrapper.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.Wrapper.Location = new System.Drawing.Point(300, 80);
-            this.Wrapper.Name = "Wrapper";
-            this.Wrapper.Size = new System.Drawing.Size(1100, 820);
-            this.Wrapper.TabIndex = 2;
+            this.bunifuFlatButtonLogIn.Activecolor = System.Drawing.Color.Transparent;
+            this.bunifuFlatButtonLogIn.BackColor = System.Drawing.Color.Transparent;
+            this.bunifuFlatButtonLogIn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.bunifuFlatButtonLogIn.BorderRadius = 0;
+            this.bunifuFlatButtonLogIn.ButtonText = "       LOG IN";
+            this.bunifuFlatButtonLogIn.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.AnimationSidebar.SetDecoration(this.bunifuFlatButtonLogIn, BunifuAnimatorNS.DecorationType.None);
+            this.AnimationSidebarBack.SetDecoration(this.bunifuFlatButtonLogIn, BunifuAnimatorNS.DecorationType.None);
+            this.bunifuFlatButtonLogIn.DisabledColor = System.Drawing.Color.Transparent;
+            this.bunifuFlatButtonLogIn.Iconcolor = System.Drawing.Color.Transparent;
+            this.bunifuFlatButtonLogIn.Iconimage = ((System.Drawing.Image)(resources.GetObject("bunifuFlatButtonLogIn.Iconimage")));
+            this.bunifuFlatButtonLogIn.Iconimage_right = null;
+            this.bunifuFlatButtonLogIn.Iconimage_right_Selected = null;
+            this.bunifuFlatButtonLogIn.Iconimage_Selected = null;
+            this.bunifuFlatButtonLogIn.IconMarginLeft = 0;
+            this.bunifuFlatButtonLogIn.IconMarginRight = 0;
+            this.bunifuFlatButtonLogIn.IconRightVisible = true;
+            this.bunifuFlatButtonLogIn.IconRightZoom = 0D;
+            this.bunifuFlatButtonLogIn.IconVisible = true;
+            this.bunifuFlatButtonLogIn.IconZoom = 50D;
+            this.bunifuFlatButtonLogIn.IsTab = false;
+            this.bunifuFlatButtonLogIn.Location = new System.Drawing.Point(8, 195);
+            this.bunifuFlatButtonLogIn.Name = "bunifuFlatButtonLogIn";
+            this.bunifuFlatButtonLogIn.Normalcolor = System.Drawing.Color.Transparent;
+            this.bunifuFlatButtonLogIn.OnHovercolor = System.Drawing.Color.Transparent;
+            this.bunifuFlatButtonLogIn.OnHoverTextColor = System.Drawing.Color.White;
+            this.bunifuFlatButtonLogIn.selected = false;
+            this.bunifuFlatButtonLogIn.Size = new System.Drawing.Size(254, 48);
+            this.bunifuFlatButtonLogIn.TabIndex = 3;
+            this.bunifuFlatButtonLogIn.Text = "       LOG IN";
+            this.bunifuFlatButtonLogIn.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.bunifuFlatButtonLogIn.Textcolor = System.Drawing.Color.LightGray;
+            this.bunifuFlatButtonLogIn.TextFont = new System.Drawing.Font("Nirmala UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bunifuFlatButtonLogIn.Click += new System.EventHandler(this.bunifuFlatButtonLogIn_Click);
             // 
             // bunifuFlatButtonRegister
             // 
@@ -265,123 +312,47 @@
             this.bunifuFlatButtonRegister.TextFont = new System.Drawing.Font("Nirmala UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bunifuFlatButtonRegister.Click += new System.EventHandler(this.bunifuFlatButtonRegister_Click);
             // 
-            // bunifuFlatButtonLogIn
+            // LineSidebar
             // 
-            this.bunifuFlatButtonLogIn.Activecolor = System.Drawing.Color.Transparent;
-            this.bunifuFlatButtonLogIn.BackColor = System.Drawing.Color.Transparent;
-            this.bunifuFlatButtonLogIn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.bunifuFlatButtonLogIn.BorderRadius = 0;
-            this.bunifuFlatButtonLogIn.ButtonText = "       LOG IN";
-            this.bunifuFlatButtonLogIn.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.AnimationSidebar.SetDecoration(this.bunifuFlatButtonLogIn, BunifuAnimatorNS.DecorationType.None);
-            this.AnimationSidebarBack.SetDecoration(this.bunifuFlatButtonLogIn, BunifuAnimatorNS.DecorationType.None);
-            this.bunifuFlatButtonLogIn.DisabledColor = System.Drawing.Color.Gray;
-            this.bunifuFlatButtonLogIn.Iconcolor = System.Drawing.Color.Transparent;
-            this.bunifuFlatButtonLogIn.Iconimage = ((System.Drawing.Image)(resources.GetObject("bunifuFlatButtonLogIn.Iconimage")));
-            this.bunifuFlatButtonLogIn.Iconimage_right = null;
-            this.bunifuFlatButtonLogIn.Iconimage_right_Selected = null;
-            this.bunifuFlatButtonLogIn.Iconimage_Selected = null;
-            this.bunifuFlatButtonLogIn.IconMarginLeft = 0;
-            this.bunifuFlatButtonLogIn.IconMarginRight = 0;
-            this.bunifuFlatButtonLogIn.IconRightVisible = true;
-            this.bunifuFlatButtonLogIn.IconRightZoom = 0D;
-            this.bunifuFlatButtonLogIn.IconVisible = true;
-            this.bunifuFlatButtonLogIn.IconZoom = 50D;
-            this.bunifuFlatButtonLogIn.IsTab = false;
-            this.bunifuFlatButtonLogIn.Location = new System.Drawing.Point(8, 195);
-            this.bunifuFlatButtonLogIn.Name = "bunifuFlatButtonLogIn";
-            this.bunifuFlatButtonLogIn.Normalcolor = System.Drawing.Color.Transparent;
-            this.bunifuFlatButtonLogIn.OnHovercolor = System.Drawing.Color.Transparent;
-            this.bunifuFlatButtonLogIn.OnHoverTextColor = System.Drawing.Color.White;
-            this.bunifuFlatButtonLogIn.selected = false;
-            this.bunifuFlatButtonLogIn.Size = new System.Drawing.Size(254, 48);
-            this.bunifuFlatButtonLogIn.TabIndex = 3;
-            this.bunifuFlatButtonLogIn.Text = "       LOG IN";
-            this.bunifuFlatButtonLogIn.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.bunifuFlatButtonLogIn.Textcolor = System.Drawing.Color.LightGray;
-            this.bunifuFlatButtonLogIn.TextFont = new System.Drawing.Font("Nirmala UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bunifuFlatButtonLogIn.Click += new System.EventHandler(this.bunifuFlatButtonLogIn_Click);
+            this.LineSidebar.BackColor = System.Drawing.Color.Transparent;
+            this.AnimationSidebarBack.SetDecoration(this.LineSidebar, BunifuAnimatorNS.DecorationType.None);
+            this.AnimationSidebar.SetDecoration(this.LineSidebar, BunifuAnimatorNS.DecorationType.None);
+            this.LineSidebar.LineColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.LineSidebar.LineThickness = 1;
+            this.LineSidebar.Location = new System.Drawing.Point(10, 94);
+            this.LineSidebar.Name = "LineSidebar";
+            this.LineSidebar.Size = new System.Drawing.Size(252, 1);
+            this.LineSidebar.TabIndex = 0;
+            this.LineSidebar.Transparency = 255;
+            this.LineSidebar.Vertical = false;
             // 
-            // bunifuElipseCurveSidebar
+            // Wrapper
             // 
-            this.bunifuElipseCurveSidebar.ElipseRadius = 7;
-            this.bunifuElipseCurveSidebar.TargetControl = this.Sidebar;
+            this.Wrapper.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(46)))));
+            this.Wrapper.Controls.Add(this.panelForms);
+            this.Wrapper.Controls.Add(this.label3MainForm);
+            this.Wrapper.Controls.Add(this.label2MainForm);
+            this.Wrapper.Controls.Add(this.labelMainFormText);
+            this.AnimationSidebarBack.SetDecoration(this.Wrapper, BunifuAnimatorNS.DecorationType.None);
+            this.AnimationSidebar.SetDecoration(this.Wrapper, BunifuAnimatorNS.DecorationType.None);
+            this.Wrapper.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.Wrapper.Location = new System.Drawing.Point(300, 80);
+            this.Wrapper.Name = "Wrapper";
+            this.Wrapper.Size = new System.Drawing.Size(1100, 820);
+            this.Wrapper.TabIndex = 2;
             // 
-            // AnimationSidebar
+            // panelForms
             // 
-            this.AnimationSidebar.AnimationType = BunifuAnimatorNS.AnimationType.Particles;
-            this.AnimationSidebar.Cursor = null;
-            animation1.AnimateOnlyDifferences = true;
-            animation1.BlindCoeff = ((System.Drawing.PointF)(resources.GetObject("animation1.BlindCoeff")));
-            animation1.LeafCoeff = 0F;
-            animation1.MaxTime = 1F;
-            animation1.MinTime = 0F;
-            animation1.MosaicCoeff = ((System.Drawing.PointF)(resources.GetObject("animation1.MosaicCoeff")));
-            animation1.MosaicShift = ((System.Drawing.PointF)(resources.GetObject("animation1.MosaicShift")));
-            animation1.MosaicSize = 1;
-            animation1.Padding = new System.Windows.Forms.Padding(100, 50, 100, 150);
-            animation1.RotateCoeff = 0F;
-            animation1.RotateLimit = 0F;
-            animation1.ScaleCoeff = ((System.Drawing.PointF)(resources.GetObject("animation1.ScaleCoeff")));
-            animation1.SlideCoeff = ((System.Drawing.PointF)(resources.GetObject("animation1.SlideCoeff")));
-            animation1.TimeCoeff = 2F;
-            animation1.TransparencyCoeff = 0F;
-            this.AnimationSidebar.DefaultAnimation = animation1;
-            // 
-            // AnimationSidebarBack
-            // 
-            this.AnimationSidebarBack.AnimationType = BunifuAnimatorNS.AnimationType.HorizSlide;
-            this.AnimationSidebarBack.Cursor = null;
-            animation2.AnimateOnlyDifferences = true;
-            animation2.BlindCoeff = ((System.Drawing.PointF)(resources.GetObject("animation2.BlindCoeff")));
-            animation2.LeafCoeff = 0F;
-            animation2.MaxTime = 1F;
-            animation2.MinTime = 0F;
-            animation2.MosaicCoeff = ((System.Drawing.PointF)(resources.GetObject("animation2.MosaicCoeff")));
-            animation2.MosaicShift = ((System.Drawing.PointF)(resources.GetObject("animation2.MosaicShift")));
-            animation2.MosaicSize = 0;
-            animation2.Padding = new System.Windows.Forms.Padding(0, 0, 0, 0);
-            animation2.RotateCoeff = 0F;
-            animation2.RotateLimit = 0F;
-            animation2.ScaleCoeff = ((System.Drawing.PointF)(resources.GetObject("animation2.ScaleCoeff")));
-            animation2.SlideCoeff = ((System.Drawing.PointF)(resources.GetObject("animation2.SlideCoeff")));
-            animation2.TimeCoeff = 0F;
-            animation2.TransparencyCoeff = 0F;
-            this.AnimationSidebarBack.DefaultAnimation = animation2;
-            // 
-            // labelMainFormText
-            // 
-            this.labelMainFormText.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.panelForms.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.labelMainFormText.AutoSize = true;
-            this.AnimationSidebar.SetDecoration(this.labelMainFormText, BunifuAnimatorNS.DecorationType.None);
-            this.AnimationSidebarBack.SetDecoration(this.labelMainFormText, BunifuAnimatorNS.DecorationType.None);
-            this.labelMainFormText.Font = new System.Drawing.Font("Nirmala UI", 48F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelMainFormText.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(161)))), ((int)(((byte)(25)))), ((int)(((byte)(80)))));
-            this.labelMainFormText.Location = new System.Drawing.Point(450, 301);
-            this.labelMainFormText.Name = "labelMainFormText";
-            this.labelMainFormText.Size = new System.Drawing.Size(185, 86);
-            this.labelMainFormText.TabIndex = 0;
-            this.labelMainFormText.Text = "2048";
-            this.labelMainFormText.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // label2MainForm
-            // 
-            this.label2MainForm.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.label2MainForm.AutoSize = true;
-            this.AnimationSidebar.SetDecoration(this.label2MainForm, BunifuAnimatorNS.DecorationType.None);
-            this.AnimationSidebarBack.SetDecoration(this.label2MainForm, BunifuAnimatorNS.DecorationType.None);
-            this.label2MainForm.Font = new System.Drawing.Font("Nirmala UI", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2MainForm.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(161)))), ((int)(((byte)(25)))), ((int)(((byte)(80)))));
-            this.label2MainForm.Location = new System.Drawing.Point(495, 387);
-            this.label2MainForm.Name = "label2MainForm";
-            this.label2MainForm.Size = new System.Drawing.Size(105, 30);
-            this.label2MainForm.TabIndex = 1;
-            this.label2MainForm.Text = "MADE BY";
-            this.label2MainForm.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.panelForms.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(41)))), ((int)(((byte)(61)))));
+            this.AnimationSidebarBack.SetDecoration(this.panelForms, BunifuAnimatorNS.DecorationType.None);
+            this.AnimationSidebar.SetDecoration(this.panelForms, BunifuAnimatorNS.DecorationType.None);
+            this.panelForms.Location = new System.Drawing.Point(17, 17);
+            this.panelForms.Name = "panelForms";
+            this.panelForms.Size = new System.Drawing.Size(1056, 784);
+            this.panelForms.TabIndex = 3;
             // 
             // label3MainForm
             // 
@@ -400,18 +371,86 @@
             this.label3MainForm.Text = "Danilo Korać\r\nNenad Penezić\r\nNikola Tomić\r\n";
             this.label3MainForm.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // panelForms
+            // label2MainForm
             // 
-            this.panelForms.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.label2MainForm.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.panelForms.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(41)))), ((int)(((byte)(61)))));
-            this.AnimationSidebarBack.SetDecoration(this.panelForms, BunifuAnimatorNS.DecorationType.None);
-            this.AnimationSidebar.SetDecoration(this.panelForms, BunifuAnimatorNS.DecorationType.None);
-            this.panelForms.Location = new System.Drawing.Point(17, 17);
-            this.panelForms.Name = "panelForms";
-            this.panelForms.Size = new System.Drawing.Size(1056, 784);
-            this.panelForms.TabIndex = 3;
+            this.label2MainForm.AutoSize = true;
+            this.AnimationSidebar.SetDecoration(this.label2MainForm, BunifuAnimatorNS.DecorationType.None);
+            this.AnimationSidebarBack.SetDecoration(this.label2MainForm, BunifuAnimatorNS.DecorationType.None);
+            this.label2MainForm.Font = new System.Drawing.Font("Nirmala UI", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2MainForm.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(161)))), ((int)(((byte)(25)))), ((int)(((byte)(80)))));
+            this.label2MainForm.Location = new System.Drawing.Point(495, 387);
+            this.label2MainForm.Name = "label2MainForm";
+            this.label2MainForm.Size = new System.Drawing.Size(105, 30);
+            this.label2MainForm.TabIndex = 1;
+            this.label2MainForm.Text = "MADE BY";
+            this.label2MainForm.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // labelMainFormText
+            // 
+            this.labelMainFormText.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.labelMainFormText.AutoSize = true;
+            this.AnimationSidebar.SetDecoration(this.labelMainFormText, BunifuAnimatorNS.DecorationType.None);
+            this.AnimationSidebarBack.SetDecoration(this.labelMainFormText, BunifuAnimatorNS.DecorationType.None);
+            this.labelMainFormText.Font = new System.Drawing.Font("Nirmala UI", 48F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelMainFormText.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(161)))), ((int)(((byte)(25)))), ((int)(((byte)(80)))));
+            this.labelMainFormText.Location = new System.Drawing.Point(450, 301);
+            this.labelMainFormText.Name = "labelMainFormText";
+            this.labelMainFormText.Size = new System.Drawing.Size(185, 86);
+            this.labelMainFormText.TabIndex = 0;
+            this.labelMainFormText.Text = "2048";
+            this.labelMainFormText.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // bunifuElipseCurveSidebar
+            // 
+            this.bunifuElipseCurveSidebar.ElipseRadius = 7;
+            this.bunifuElipseCurveSidebar.TargetControl = this.Sidebar;
+            // 
+            // AnimationSidebar
+            // 
+            this.AnimationSidebar.AnimationType = BunifuAnimatorNS.AnimationType.Particles;
+            this.AnimationSidebar.Cursor = null;
+            animation6.AnimateOnlyDifferences = true;
+            animation6.BlindCoeff = ((System.Drawing.PointF)(resources.GetObject("animation6.BlindCoeff")));
+            animation6.LeafCoeff = 0F;
+            animation6.MaxTime = 1F;
+            animation6.MinTime = 0F;
+            animation6.MosaicCoeff = ((System.Drawing.PointF)(resources.GetObject("animation6.MosaicCoeff")));
+            animation6.MosaicShift = ((System.Drawing.PointF)(resources.GetObject("animation6.MosaicShift")));
+            animation6.MosaicSize = 1;
+            animation6.Padding = new System.Windows.Forms.Padding(100, 50, 100, 150);
+            animation6.RotateCoeff = 0F;
+            animation6.RotateLimit = 0F;
+            animation6.ScaleCoeff = ((System.Drawing.PointF)(resources.GetObject("animation6.ScaleCoeff")));
+            animation6.SlideCoeff = ((System.Drawing.PointF)(resources.GetObject("animation6.SlideCoeff")));
+            animation6.TimeCoeff = 2F;
+            animation6.TransparencyCoeff = 0F;
+            this.AnimationSidebar.DefaultAnimation = animation6;
+            // 
+            // AnimationSidebarBack
+            // 
+            this.AnimationSidebarBack.AnimationType = BunifuAnimatorNS.AnimationType.HorizSlide;
+            this.AnimationSidebarBack.Cursor = null;
+            animation5.AnimateOnlyDifferences = true;
+            animation5.BlindCoeff = ((System.Drawing.PointF)(resources.GetObject("animation5.BlindCoeff")));
+            animation5.LeafCoeff = 0F;
+            animation5.MaxTime = 1F;
+            animation5.MinTime = 0F;
+            animation5.MosaicCoeff = ((System.Drawing.PointF)(resources.GetObject("animation5.MosaicCoeff")));
+            animation5.MosaicShift = ((System.Drawing.PointF)(resources.GetObject("animation5.MosaicShift")));
+            animation5.MosaicSize = 0;
+            animation5.Padding = new System.Windows.Forms.Padding(0);
+            animation5.RotateCoeff = 0F;
+            animation5.RotateLimit = 0F;
+            animation5.ScaleCoeff = ((System.Drawing.PointF)(resources.GetObject("animation5.ScaleCoeff")));
+            animation5.SlideCoeff = ((System.Drawing.PointF)(resources.GetObject("animation5.SlideCoeff")));
+            animation5.TimeCoeff = 0F;
+            animation5.TransparencyCoeff = 0F;
+            this.AnimationSidebarBack.DefaultAnimation = animation5;
             // 
             // MainForm
             // 
@@ -464,6 +503,7 @@
         private System.Windows.Forms.Label label3MainForm;
         private System.Windows.Forms.Label label2MainForm;
         private System.Windows.Forms.Panel panelForms;
+        private Bunifu.Framework.UI.BunifuFlatButton bunifuFlatButtonGame;
     }
 }
 
