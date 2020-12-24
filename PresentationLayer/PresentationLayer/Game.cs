@@ -13,6 +13,8 @@ namespace PresentationLayer
 {
     public partial class Game : Form
     {
+        public static string username = "John Doe";
+        private int timerInterval = 1;
         private GameMechanics gameMechanics;
         public Game()
         {
@@ -44,10 +46,10 @@ namespace PresentationLayer
         }
         private void ResetColors()
         {
-            bunifuThinButtonLeftA.ForeColor = Color.White;
-            bunifuThinButtonUpW.ForeColor = Color.White;
-            bunifuThinButtonRightD.ForeColor = Color.White;
-            bunifuThinButtonDownS.ForeColor = Color.White;
+            bunifuThinButtonLeftA.ForeColor = Color.Black;
+            bunifuThinButtonUpW.ForeColor = Color.Black;
+            bunifuThinButtonRightD.ForeColor = Color.Black;
+            bunifuThinButtonDownS.ForeColor = Color.Black;
         }
       
         private void Game_KeyDown(object sender, KeyEventArgs e)
@@ -57,11 +59,13 @@ namespace PresentationLayer
                 gameMechanics.moveLeft();
                 label2Score.Text = "" + gameMechanics.Score;
                 label3Moves.Text = "" + gameMechanics.moveCounter;
-                Test();
+                Test();              
                 ResetColors();
-                bunifuThinButtonLeftA.ForeColor = Color.Black;
-                
-
+                bunifuThinButtonLeftA.ForeColor = Color.White;
+                if(!timer1.Enabled)
+                {
+                    timer1.Start();
+                }
 
 
             }
@@ -72,8 +76,12 @@ namespace PresentationLayer
                 label3Moves.Text = "" + gameMechanics.moveCounter;
                 Test();
                 ResetColors();
-                bunifuThinButtonRightD.ForeColor = Color.Black;
-               
+                bunifuThinButtonRightD.ForeColor = Color.White;
+                if (!timer1.Enabled)
+                {
+                    timer1.Start();
+                }
+
             }
             else if (e.KeyCode == Keys.Up || e.KeyCode == Keys.W)
             {
@@ -82,8 +90,12 @@ namespace PresentationLayer
                 label3Moves.Text = "" + gameMechanics.moveCounter;
                 Test();
                 ResetColors();
-                bunifuThinButtonUpW.ForeColor = Color.Black;
-                
+                bunifuThinButtonUpW.ForeColor = Color.White;
+                if (!timer1.Enabled)
+                {
+                    timer1.Start();
+                }
+
             }
             else if (e.KeyCode == Keys.Down || e.KeyCode == Keys.S)
             {
@@ -93,10 +105,23 @@ namespace PresentationLayer
                 label3Moves.Text = "" + gameMechanics.moveCounter;
                 Test();
                 ResetColors();
-                bunifuThinButtonDownS.ForeColor = Color.Black;
-               
+                bunifuThinButtonDownS.ForeColor = Color.White;
+                if (!timer1.Enabled)
+                {
+                    timer1.Start();
+                }
+
             }
         }
 
+        private void labelUser_VisibleChanged(object sender, EventArgs e)
+        {
+            labelUser.Text = "Welcome  " + username + ", have fun!";
+        }
+
+        private void timer(object sender, EventArgs e)
+        {
+            labeltimer.Text = timerInterval++ + "s";
+        }
     }
 }

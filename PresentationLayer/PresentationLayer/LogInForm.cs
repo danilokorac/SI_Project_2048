@@ -14,7 +14,7 @@ namespace PresentationLayer
     public partial class LogInForm : Form
     {
         private readonly BLayer bl;
-
+        public bool login = false;
         public LogInForm()
         {
             InitializeComponent();
@@ -55,7 +55,7 @@ namespace PresentationLayer
         {
 
         }
-
+        public static Game playGame = new Game() { Dock = DockStyle.Fill, TopLevel = false, TopMost = true };
         private void bunifuThinButtonLogIn_Click(object sender, EventArgs e)
         {
             string username = bunifuTextboxUsernameLogIn.text;
@@ -63,8 +63,9 @@ namespace PresentationLayer
 
             if (bl.PlayerLogIn(username, password))
             {
-                MessageBox.Show("You have successfully logged in!");
-
+                MessageBox.Show("You have successfully logged in, press Play in the menu on the left!");
+                login = true;
+                Game.username = username;
             }
             else
             {
