@@ -12,6 +12,6 @@ namespace DataAccessLayer.Models
         public int Score { get; set; }
         public DateTime DateAndTime { get; set; }
         public int NumberOfMoves { get; set; }
-        public DateTime TimePlayed { get; set; }
+        public string TimePlayed { get; set; }
     }
 }
