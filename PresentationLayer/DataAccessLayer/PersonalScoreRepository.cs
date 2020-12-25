@@ -23,5 +23,35 @@ namespace DataAccessLayer
             }
             return result;
         }
+
+        public List<PersonalScore> GetAllPersonalScores()
+        {
+            List<PersonalScore> ps = new List<PersonalScore>();
+
+            using (SqlConnection con = new SqlConnection(Constants.connString))
+            {
+                SqlCommand com = new SqlCommand();
+                com.Connection = con;
+                com.CommandText = "SELECT * FROM Personal_Scores";
+
+                con.Open();
+                SqlDataReader dr = com.ExecuteReader();
+
+                while (dr.Read())
+                {
+                    PersonalScore ps1 = new PersonalScore();
+                    ps1.PlayerID = dr.GetInt32(0);
+                    ps1.Score = dr.GetInt32(1);
+                    ps1.DateAndTime = dr.GetDateTime(2);
+                    ps1.NumberOfMoves = dr.GetInt32(3);
+                    ps1.TimePlayed = dr.GetString(4);
+
+                    ps.Add(ps1);
+                }
+
+
+                return ps;
+            }
+        }
     }
 }
