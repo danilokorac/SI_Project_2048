@@ -41,10 +41,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AchievementsRepository.cs" />
     <Compile Include="Constants.cs" />
-    <Compile Include="Models\Achievements.cs" />
+    <Compile Include="Models\Achievement.cs" />
     <Compile Include="Models\PersonalScore.cs" />
     <Compile Include="Models\Player.cs" />
+    <Compile Include="PersonalScoreRepository.cs" />
     <Compile Include="PlayerRepository.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
