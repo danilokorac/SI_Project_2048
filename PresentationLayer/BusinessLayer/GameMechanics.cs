@@ -47,6 +47,7 @@ namespace BusinessLayer
             {
                 if (gameOver())
                 {
+                    isGameOver = true;
                     PersonalScore ps = new PersonalScore();
                     ps.PlayerID = databaseConfig.getPlayer().PlayerID;
                     ps.Score = Score;
