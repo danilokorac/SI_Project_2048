@@ -49,7 +49,7 @@ namespace BusinessLayer
                 {
                     isGameOver = true;
                     PersonalScore ps = new PersonalScore();
-                    ps.PlayerID = databaseConfig.getPlayer().PlayerID;
+                    ps.PL_ID = databaseConfig.getPlayer().PlayerID;
                     ps.Score = Score;
                     ps.NumberOfMoves = moveCounter;
                     ps.TimePlayed = "UNKNOW";

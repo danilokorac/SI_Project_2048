@@ -15,7 +15,7 @@ namespace DataAccessLayer
             int result;
             using (SqlConnection con = new SqlConnection(Constants.connString))
             {
-                string commandText = string.Format("INSERT INTO Achievements VALUES( {0}, {1}, {2},)", a.CompletedGame, a.BetterThanAverageMoves, a.BetterThanAverageTime);
+                string commandText = string.Format("INSERT INTO Achievements VALUES( {0}, {1}, {2}, {3})", a.CompletedGame, a.BetterThanAverageMoves, a.BetterThanAverageTime, a.PA_ID);
                 SqlCommand com = new SqlCommand(commandText, con);
 
                 con.Open();
@@ -30,7 +30,7 @@ namespace DataAccessLayer
             using (SqlConnection con = new SqlConnection(Constants.connString))
             {
                 string commandText = string.Format("UPDATE Achievements SET CompletedGame = {0}, BetterThanAverageMoves = {1}, BetterThanAverageTime = {2}" +
-                    "WHERE Id = {3} ", a.CompletedGame, a.BetterThanAverageMoves, a.BetterThanAverageTime, id);
+                    "WHERE PA_ID = {3} ", a.CompletedGame, a.BetterThanAverageMoves, a.BetterThanAverageTime, id);
                 SqlCommand com = new SqlCommand(commandText, con);
 
                 con.Open();
@@ -49,7 +49,7 @@ namespace DataAccessLayer
                 SqlCommand com = new SqlCommand();
                 com.Connection = con;
                 com.CommandText = string.Format("SELECT * FROM Achievements" + 
-                    "WHERE Id = {0}", id);
+                    "WHERE PA_ID = {0}", id);
 
                 con.Open();
                 SqlDataReader dr = com.ExecuteReader();
@@ -57,10 +57,11 @@ namespace DataAccessLayer
                 while (dr.Read())
                 {
                     Achievement ac = new Achievement();
-                    ac.PlayerID = dr.GetInt32(0);
+                    ac.AchievementID = dr.GetInt32(0);
                     ac.CompletedGame = dr.GetBoolean(1);
                     ac.BetterThanAverageMoves = dr.GetBoolean(2);
                     ac.BetterThanAverageTime = dr.GetBoolean(3);
+                    ac.PA_ID = dr.GetInt32(4);
 
                     a.Add(ac);
                 }

@@ -15,7 +15,7 @@ namespace DataAccessLayer
             int result;
             using (SqlConnection con = new SqlConnection(Constants.connString))
             {
-                string commandText = string.Format("INSERT INTO Personal_Scores VALUES( '{0}', '{1}', '{2}', '{3}')",ps.Score, ps.DateAndTime, ps.NumberOfMoves, ps.TimePlayed);
+                string commandText = string.Format("INSERT INTO Personal_Scores VALUES( {0}, '{1}', {2}, '{3}', {4})",ps.Score, ps.DateAndTime, ps.NumberOfMoves, ps.TimePlayed, ps.PL_ID);
                 SqlCommand com = new SqlCommand(commandText, con);
 
                 con.Open();
@@ -24,7 +24,7 @@ namespace DataAccessLayer
             return result;
         }
 
-        public List<PersonalScore> GetAllPersonalScores()
+        public List<PersonalScore> GetAllPersonalScores(int id)
         {
             List<PersonalScore> ps = new List<PersonalScore>();
 
@@ -32,7 +32,8 @@ namespace DataAccessLayer
             {
                 SqlCommand com = new SqlCommand();
                 com.Connection = con;
-                com.CommandText = "SELECT * FROM Personal_Scores";
+                com.CommandText = string.Format("SELECT * FROM Personal_Scores" +
+                    "WHERE PL_ID = {0}", id);
 
                 con.Open();
                 SqlDataReader dr = com.ExecuteReader();
@@ -40,7 +41,7 @@ namespace DataAccessLayer
                 while (dr.Read())
                 {
                     PersonalScore ps1 = new PersonalScore();
-                    ps1.PlayerID = dr.GetInt32(0);
+                    ps1.PersonalScoreID = dr.GetInt32(0);
                     ps1.Score = dr.GetInt32(1);
                     ps1.DateAndTime = dr.GetDateTime(2);
                     ps1.NumberOfMoves = dr.GetInt32(3);

@@ -8,10 +8,11 @@ namespace DataAccessLayer.Models
 {
     public class PersonalScore
     {
-        public int PlayerID { get; set; }
+        public int PersonalScoreID { get; set; }
         public int Score { get; set; }
         public DateTime DateAndTime { get; set; }
         public int NumberOfMoves { get; set; }
         public string TimePlayed { get; set; }
+        public int PL_ID { get; set; }
     }
 }
