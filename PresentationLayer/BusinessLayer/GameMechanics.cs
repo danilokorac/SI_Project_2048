@@ -14,11 +14,14 @@ namespace BusinessLayer
         public int Score { get; set; }
         public bool isGameOver { get; set; }
         BLayer databaseConfig = new BLayer();
+        private bool isInsertet;
         public GameMechanics()
         {
             moveCounter = 0;
             Score = 0;
             isGameOver = false;
+            isInsertet = false;
+
         }
         public void randomGenerator()
         {
@@ -55,9 +58,9 @@ namespace BusinessLayer
                     ps.TimePlayed = "UNKNOW";
                     ps.DateAndTime = DateTime.Now;
 
-                    if (databaseConfig.insertPlayerScore(ps))
+                    if (!isInsertet&&databaseConfig.insertPlayerScore(ps))
                     {
-
+                        isInsertet = true;
                     }
                 }
                 
