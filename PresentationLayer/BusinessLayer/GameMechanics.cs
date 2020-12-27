@@ -52,7 +52,7 @@ namespace BusinessLayer
                 {
                     isGameOver = true;
                     PersonalScore ps = new PersonalScore();
-                    ps.PlayerID = databaseConfig.getPlayer().PlayerID;
+                    ps.PL_ID = databaseConfig.getPlayer().PlayerID;
                     ps.Score = Score;
                     ps.NumberOfMoves = moveCounter;
                     ps.TimePlayed = "UNKNOW";
@@ -61,7 +61,11 @@ namespace BusinessLayer
                     if (!isInsertet&&databaseConfig.insertPlayerScore(ps))
                     {
                         isInsertet = true;
+                        updateAchivements();
                     }
+                }else if (gameCompleted())
+                {
+                    updateAchivements();
                 }
                 
 
@@ -111,6 +115,18 @@ namespace BusinessLayer
                 moveCounter++;
         }
 
+        public bool gameCompleted()
+        {
+            for(int i = 0; i < 4; i++)
+            {
+                for(int j = 0; j < 4; j++)
+                {
+                    if (GameBoard[i, j] == 2048)
+                        return true;
+                }
+            }
+            return false;
+        }
         public void moveLeft()
         {
             for (int i = 0; i < 4; i++)
@@ -305,6 +321,36 @@ namespace BusinessLayer
             countMovies();
             randomGenerator();
         }
+
+        public void updateAchivements()
+        {
+            if (databaseConfig.getAchievement().BetterThanAverageMoves==0&&moveCounter >= 1500) //izmeniti kasnije
+                databaseConfig.getAchievement().BetterThanAverageMoves = 1;
+            if (databaseConfig.getAchievement().BetterThanAverageTime == 0 && moveCounter >= 1500) //izmeniti kada time bude dostupan
+                databaseConfig.getAchievement().BetterThanAverageTime = 1;
+            if (databaseConfig.getAchievement().CompletedGame == 0 && gameCompleted())
+                databaseConfig.getAchievement().CompletedGame = 1;
+
+                databaseConfig.insertAchievement();
+        }
+
+        public void restartGame()
+        {
+            for(int i = 0; i < 4; i++)
+            {
+                for (int j = 0; j < 4; j++)
+                {
+                    GameBoard[i, j] = 0;
+                }
+            }
+            moveCounter = 0;
+            Score = 0;
+            isGameOver = false;
+            isMoved = true;
+            isInsertet = false;
+        }
+
+
     }
 
 
