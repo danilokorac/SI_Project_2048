@@ -66,7 +66,7 @@ namespace PresentationLayer
                 {
                     timer1.Start();
                 }
-
+               
 
             }
             else  if (e.KeyCode == Keys.Right || e.KeyCode == Keys.D)
@@ -81,7 +81,7 @@ namespace PresentationLayer
                 {
                     timer1.Start();
                 }
-
+               
             }
             else if (e.KeyCode == Keys.Up || e.KeyCode == Keys.W)
             {
@@ -95,7 +95,7 @@ namespace PresentationLayer
                 {
                     timer1.Start();
                 }
-
+                
             }
             else if (e.KeyCode == Keys.Down || e.KeyCode == Keys.S)
             {
@@ -110,7 +110,7 @@ namespace PresentationLayer
                 {
                     timer1.Start();
                 }
-
+                
             }
         }
 
@@ -122,6 +122,11 @@ namespace PresentationLayer
         private void timer(object sender, EventArgs e)
         {
             labeltimer.Text = timerInterval++ + "s";
+        }
+
+        private void Game_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }
