@@ -41,13 +41,14 @@ namespace BusinessLayer
             List<PersonalScore> score = new List<PersonalScore>();
             for(int i=0;i< psr.GetAllPersonalScores().Count; i++)
             {
-                if (p.PlayerID == psr.GetAllPersonalScores()[i].PlayerID)
+                if (p.PlayerID == psr.GetAllPersonalScores()[i].PersonalScoreID)
                 {
                     PersonalScore ps = new PersonalScore();
-                    ps.PlayerID = psr.GetAllPersonalScores()[i].PlayerID;
+                    ps.PersonalScoreID = psr.GetAllPersonalScores()[i].PersonalScoreID;
                     ps.Score = psr.GetAllPersonalScores()[i].Score;
                     ps.DateAndTime = psr.GetAllPersonalScores()[i].DateAndTime;
                     ps.TimePlayed = psr.GetAllPersonalScores()[i].TimePlayed;
+                    ps.PL_ID = psr.GetAllPersonalScores()[i].PL_ID;
                     score.Add(ps);
                 }
             }
