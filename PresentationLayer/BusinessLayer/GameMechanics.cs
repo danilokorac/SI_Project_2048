@@ -1,4 +1,5 @@
-﻿using System;
+﻿using DataAccessLayer.Models;
+using System;
 using System.Collections.Generic;
 using System.Text;
 
@@ -7,15 +8,17 @@ namespace BusinessLayer
 
     public class GameMechanics
     {
-        public int[,] GameBoard = { { 0, 0, 0, 0 }, { 0, 0, 0, 0 }, { 0, 0, 0, 0 }, { 0, 0, 0, 0 } };
+        public int[,] GameBoard = { { 0, 0, 0, 0 }, { 0, 0, 0, 0 }, { 0, 0, 0, 0 }, { 0, 0,0, 0 } };
         private bool isMoved = true;
         public int moveCounter { get; set; }
         public int Score { get; set; }
-
+        public bool isGameOver { get; set; }
+        BLayer databaseConfig = new BLayer();
         public GameMechanics()
         {
             moveCounter = 0;
             Score = 0;
+            isGameOver = false;
         }
         public void randomGenerator()
         {
@@ -40,6 +43,26 @@ namespace BusinessLayer
 
                 isMoved = false;
             }
+            else if (isBoardFull())
+            {
+                if (gameOver())
+                {
+                    isGameOver = true;
+                    PersonalScore ps = new PersonalScore();
+                    ps.PlayerID = databaseConfig.getPlayer().PlayerID;
+                    ps.Score = Score;
+                    ps.NumberOfMoves = moveCounter;
+                    ps.TimePlayed = "UNKNOW";
+                    ps.DateAndTime = DateTime.Now;
+
+                    if (databaseConfig.insertPlayerScore(ps))
+                    {
+
+                    }
+                }
+                
+
+            }
         }
 
         private bool isBoardFull()
@@ -50,6 +73,30 @@ namespace BusinessLayer
                 {
                     if (GameBoard[i, j] == 0)
                         return false;
+                }
+            }
+            return true;
+        }
+
+
+
+       public bool gameOver()
+        {
+            for(int i = 0; i < 4; i++)
+            {
+                for (int j = 0; j < 4; j++)
+                {
+                    if (GameBoard[i, j] != 0)
+                    {
+                        if ((j == 3 && i <= 2) && GameBoard[i, j] == GameBoard[i + 1, j])
+                            return false;
+                        else if ((i == 3 && j <= 2) && GameBoard[i, j] == GameBoard[i, j + 1])
+                            return false;
+                        else if ((j < 3 && i < 3) && (GameBoard[i, j] == GameBoard[i, j+1] || GameBoard[i, j] == GameBoard[i+1,j]))
+                            return false;
+
+
+                    }
                 }
             }
             return true;

@@ -15,7 +15,7 @@ namespace DataAccessLayer
             int result;
             using (SqlConnection con = new SqlConnection(Constants.connString))
             {
-                string commandText = string.Format("INSERT INTO Personal_Scores VALUES( {0}, {1}, {2}, {3})", ps.Score, ps.DateAndTime, ps.NumberOfMoves, ps.TimePlayed);
+                string commandText = string.Format("INSERT INTO Personal_Scores VALUES( '{0}', '{1}', '{2}', '{3}')",ps.Score, ps.DateAndTime, ps.NumberOfMoves, ps.TimePlayed);
                 SqlCommand com = new SqlCommand(commandText, con);
 
                 con.Open();

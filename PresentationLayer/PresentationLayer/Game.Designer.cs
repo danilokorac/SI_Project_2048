@@ -66,10 +66,10 @@
             // 
             this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Nirmala UI", 15.75F);
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F);
             this.label1.Location = new System.Drawing.Point(817, 53);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(75, 30);
+            this.label1.Size = new System.Drawing.Size(80, 25);
             this.label1.TabIndex = 52;
             this.label1.Text = "Score: ";
             // 
@@ -77,30 +77,30 @@
             // 
             this.label2Score.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.label2Score.AutoSize = true;
-            this.label2Score.Font = new System.Drawing.Font("Nirmala UI", 15.75F);
+            this.label2Score.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F);
             this.label2Score.Location = new System.Drawing.Point(920, 53);
             this.label2Score.Name = "label2Score";
-            this.label2Score.Size = new System.Drawing.Size(62, 30);
+            this.label2Score.Size = new System.Drawing.Size(65, 25);
             this.label2Score.TabIndex = 53;
             this.label2Score.Text = "score";
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Nirmala UI", 15.75F);
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F);
             this.label4.Location = new System.Drawing.Point(701, 115);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(191, 30);
+            this.label4.Size = new System.Drawing.Size(192, 25);
             this.label4.TabIndex = 54;
             this.label4.Text = "Number of moves: ";
             // 
             // label3Moves
             // 
             this.label3Moves.AutoSize = true;
-            this.label3Moves.Font = new System.Drawing.Font("Nirmala UI", 15.75F);
+            this.label3Moves.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F);
             this.label3Moves.Location = new System.Drawing.Point(920, 115);
             this.label3Moves.Name = "label3Moves";
-            this.label3Moves.Size = new System.Drawing.Size(73, 30);
+            this.label3Moves.Size = new System.Drawing.Size(75, 25);
             this.label3Moves.TabIndex = 55;
             this.label3Moves.Text = "moves";
             // 
@@ -110,7 +110,7 @@
             this.button14.Enabled = false;
             this.button14.FlatAppearance.BorderColor = System.Drawing.Color.Black;
             this.button14.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button14.Font = new System.Drawing.Font("Nirmala UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button14.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button14.ForeColor = System.Drawing.Color.White;
             this.button14.Location = new System.Drawing.Point(441, 375);
             this.button14.Name = "button14";
@@ -124,7 +124,7 @@
             this.button15.Enabled = false;
             this.button15.FlatAppearance.BorderColor = System.Drawing.Color.Black;
             this.button15.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button15.Font = new System.Drawing.Font("Nirmala UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button15.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button15.ForeColor = System.Drawing.Color.White;
             this.button15.Location = new System.Drawing.Point(511, 375);
             this.button15.Name = "button15";
@@ -138,7 +138,7 @@
             this.button13.Enabled = false;
             this.button13.FlatAppearance.BorderColor = System.Drawing.Color.Black;
             this.button13.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button13.Font = new System.Drawing.Font("Nirmala UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button13.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button13.ForeColor = System.Drawing.Color.White;
             this.button13.Location = new System.Drawing.Point(374, 375);
             this.button13.Name = "button13";
@@ -152,7 +152,7 @@
             this.button16.Enabled = false;
             this.button16.FlatAppearance.BorderColor = System.Drawing.Color.Black;
             this.button16.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button16.Font = new System.Drawing.Font("Nirmala UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button16.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button16.ForeColor = System.Drawing.Color.White;
             this.button16.Location = new System.Drawing.Point(581, 375);
             this.button16.Name = "button16";
@@ -166,7 +166,7 @@
             this.button12.Enabled = false;
             this.button12.FlatAppearance.BorderColor = System.Drawing.Color.Black;
             this.button12.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button12.Font = new System.Drawing.Font("Nirmala UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button12.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button12.ForeColor = System.Drawing.Color.White;
             this.button12.Location = new System.Drawing.Point(581, 307);
             this.button12.Name = "button12";
@@ -180,7 +180,7 @@
             this.button17.Enabled = false;
             this.button17.FlatAppearance.BorderColor = System.Drawing.Color.Black;
             this.button17.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button17.Font = new System.Drawing.Font("Nirmala UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button17.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button17.ForeColor = System.Drawing.Color.White;
             this.button17.Location = new System.Drawing.Point(374, 442);
             this.button17.Name = "button17";
@@ -194,7 +194,7 @@
             this.button11.Enabled = false;
             this.button11.FlatAppearance.BorderColor = System.Drawing.Color.Black;
             this.button11.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button11.Font = new System.Drawing.Font("Nirmala UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button11.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button11.ForeColor = System.Drawing.Color.White;
             this.button11.Location = new System.Drawing.Point(511, 309);
             this.button11.Name = "button11";
@@ -208,7 +208,7 @@
             this.button18.Enabled = false;
             this.button18.FlatAppearance.BorderColor = System.Drawing.Color.Black;
             this.button18.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button18.Font = new System.Drawing.Font("Nirmala UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button18.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button18.ForeColor = System.Drawing.Color.White;
             this.button18.Location = new System.Drawing.Point(441, 442);
             this.button18.Name = "button18";
@@ -222,7 +222,7 @@
             this.button10.Enabled = false;
             this.button10.FlatAppearance.BorderColor = System.Drawing.Color.Black;
             this.button10.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button10.Font = new System.Drawing.Font("Nirmala UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button10.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button10.ForeColor = System.Drawing.Color.White;
             this.button10.Location = new System.Drawing.Point(441, 307);
             this.button10.Name = "button10";
@@ -236,7 +236,7 @@
             this.button19.Enabled = false;
             this.button19.FlatAppearance.BorderColor = System.Drawing.Color.Black;
             this.button19.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button19.Font = new System.Drawing.Font("Nirmala UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button19.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button19.ForeColor = System.Drawing.Color.White;
             this.button19.Location = new System.Drawing.Point(511, 442);
             this.button19.Name = "button19";
@@ -250,7 +250,7 @@
             this.button9.Enabled = false;
             this.button9.FlatAppearance.BorderColor = System.Drawing.Color.Black;
             this.button9.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button9.Font = new System.Drawing.Font("Nirmala UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button9.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button9.ForeColor = System.Drawing.Color.White;
             this.button9.Location = new System.Drawing.Point(374, 307);
             this.button9.Name = "button9";
@@ -264,7 +264,7 @@
             this.button8.Enabled = false;
             this.button8.FlatAppearance.BorderColor = System.Drawing.Color.Black;
             this.button8.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button8.Font = new System.Drawing.Font("Nirmala UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button8.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button8.ForeColor = System.Drawing.Color.White;
             this.button8.Location = new System.Drawing.Point(581, 236);
             this.button8.Name = "button8";
@@ -278,7 +278,7 @@
             this.button7.Enabled = false;
             this.button7.FlatAppearance.BorderColor = System.Drawing.Color.Black;
             this.button7.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button7.Font = new System.Drawing.Font("Nirmala UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button7.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button7.ForeColor = System.Drawing.Color.White;
             this.button7.Location = new System.Drawing.Point(511, 236);
             this.button7.Name = "button7";
@@ -292,7 +292,7 @@
             this.button6.Enabled = false;
             this.button6.FlatAppearance.BorderColor = System.Drawing.Color.Black;
             this.button6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button6.Font = new System.Drawing.Font("Nirmala UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button6.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button6.ForeColor = System.Drawing.Color.White;
             this.button6.Location = new System.Drawing.Point(441, 236);
             this.button6.Name = "button6";
@@ -306,7 +306,7 @@
             this.button5.Enabled = false;
             this.button5.FlatAppearance.BorderColor = System.Drawing.Color.Black;
             this.button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button5.Font = new System.Drawing.Font("Nirmala UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button5.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button5.ForeColor = System.Drawing.Color.White;
             this.button5.Location = new System.Drawing.Point(374, 236);
             this.button5.Name = "button5";
@@ -321,7 +321,7 @@
             this.button20.Enabled = false;
             this.button20.FlatAppearance.BorderColor = System.Drawing.Color.Black;
             this.button20.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button20.Font = new System.Drawing.Font("Nirmala UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button20.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button20.ForeColor = System.Drawing.Color.White;
             this.button20.Location = new System.Drawing.Point(581, 442);
             this.button20.Name = "button20";
@@ -341,7 +341,7 @@
             this.bunifuThinButtonLeftA.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bunifuThinButtonLeftA.BackgroundImage")));
             this.bunifuThinButtonLeftA.ButtonText = "A";
             this.bunifuThinButtonLeftA.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.bunifuThinButtonLeftA.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bunifuThinButtonLeftA.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bunifuThinButtonLeftA.ForeColor = System.Drawing.Color.Black;
             this.bunifuThinButtonLeftA.IdleBorderThickness = 1;
             this.bunifuThinButtonLeftA.IdleCornerRadius = 20;
@@ -367,7 +367,7 @@
             this.bunifuThinButtonUpW.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bunifuThinButtonUpW.BackgroundImage")));
             this.bunifuThinButtonUpW.ButtonText = "W";
             this.bunifuThinButtonUpW.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.bunifuThinButtonUpW.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bunifuThinButtonUpW.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bunifuThinButtonUpW.ForeColor = System.Drawing.Color.Black;
             this.bunifuThinButtonUpW.IdleBorderThickness = 1;
             this.bunifuThinButtonUpW.IdleCornerRadius = 20;
@@ -393,7 +393,7 @@
             this.bunifuThinButtonRightD.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bunifuThinButtonRightD.BackgroundImage")));
             this.bunifuThinButtonRightD.ButtonText = "D";
             this.bunifuThinButtonRightD.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.bunifuThinButtonRightD.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bunifuThinButtonRightD.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bunifuThinButtonRightD.ForeColor = System.Drawing.Color.Black;
             this.bunifuThinButtonRightD.IdleBorderThickness = 1;
             this.bunifuThinButtonRightD.IdleCornerRadius = 20;
@@ -419,7 +419,7 @@
             this.bunifuThinButtonDownS.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bunifuThinButtonDownS.BackgroundImage")));
             this.bunifuThinButtonDownS.ButtonText = "S";
             this.bunifuThinButtonDownS.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.bunifuThinButtonDownS.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bunifuThinButtonDownS.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bunifuThinButtonDownS.ForeColor = System.Drawing.Color.Black;
             this.bunifuThinButtonDownS.IdleBorderThickness = 1;
             this.bunifuThinButtonDownS.IdleCornerRadius = 20;
@@ -447,11 +447,11 @@
             // labelUser
             // 
             this.labelUser.AutoSize = true;
-            this.labelUser.Font = new System.Drawing.Font("Nirmala UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelUser.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelUser.ForeColor = System.Drawing.Color.White;
             this.labelUser.Location = new System.Drawing.Point(107, 53);
             this.labelUser.Name = "labelUser";
-            this.labelUser.Size = new System.Drawing.Size(54, 30);
+            this.labelUser.Size = new System.Drawing.Size(57, 25);
             this.labelUser.TabIndex = 64;
             this.labelUser.Text = "User";
             this.labelUser.VisibleChanged += new System.EventHandler(this.labelUser_VisibleChanged);
@@ -459,20 +459,20 @@
             // labelTimeplayed
             // 
             this.labelTimeplayed.AutoSize = true;
-            this.labelTimeplayed.Font = new System.Drawing.Font("Nirmala UI", 15.75F);
+            this.labelTimeplayed.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F);
             this.labelTimeplayed.Location = new System.Drawing.Point(756, 179);
             this.labelTimeplayed.Name = "labelTimeplayed";
-            this.labelTimeplayed.Size = new System.Drawing.Size(136, 30);
+            this.labelTimeplayed.Size = new System.Drawing.Size(141, 25);
             this.labelTimeplayed.TabIndex = 65;
             this.labelTimeplayed.Text = "Time played: ";
             // 
             // labeltimer
             // 
             this.labeltimer.AutoSize = true;
-            this.labeltimer.Font = new System.Drawing.Font("Nirmala UI", 15.75F);
+            this.labeltimer.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F);
             this.labeltimer.Location = new System.Drawing.Point(920, 179);
             this.labeltimer.Name = "labeltimer";
-            this.labeltimer.Size = new System.Drawing.Size(33, 30);
+            this.labeltimer.Size = new System.Drawing.Size(35, 25);
             this.labeltimer.TabIndex = 66;
             this.labeltimer.Text = "0s";
             // 
@@ -520,6 +520,7 @@
             this.KeyPreview = true;
             this.Name = "Game";
             this.Text = "Game";
+            this.Load += new System.EventHandler(this.Game_Load);
             this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.Game_KeyDown);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxUser)).EndInit();
             this.ResumeLayout(false);
