@@ -48,8 +48,7 @@ namespace DataAccessLayer
             {
                 SqlCommand com = new SqlCommand();
                 com.Connection = con;
-                com.CommandText = string.Format("SELECT * FROM Achievements" + 
-                    "WHERE PA_ID = {0}", id);
+                com.CommandText = string.Format("SELECT * FROM Achievements WHERE PA_ID = {0}", id);
 
                 con.Open();
                 SqlDataReader dr = com.ExecuteReader();
@@ -58,9 +57,21 @@ namespace DataAccessLayer
                 {
                     Achievement ac = new Achievement();
                     ac.AchievementID = dr.GetInt32(0);
-                    ac.CompletedGame = dr.GetBoolean(1);
-                    ac.BetterThanAverageMoves = dr.GetBoolean(2);
-                    ac.BetterThanAverageTime = dr.GetBoolean(3);
+                    if(dr.GetBoolean(1))
+                    ac.CompletedGame = 1;
+                    else
+                    ac.CompletedGame = 0;
+
+                    if(dr.GetBoolean(2))
+                    ac.BetterThanAverageMoves = 1;
+                    else
+                    ac.BetterThanAverageMoves = 0;
+
+                    if(dr.GetBoolean(3))
+                    ac.BetterThanAverageTime = 1;
+                    else
+                    ac.BetterThanAverageTime = 0;
+
                     ac.PA_ID = dr.GetInt32(4);
 
                     a.Add(ac);

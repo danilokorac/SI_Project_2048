@@ -9,10 +9,14 @@ namespace BusinessLayer
     {
         private readonly PlayerRepository pr;
         private static Player p = new Player();
-        private readonly PersonalScoreRepository psr = new PersonalScoreRepository();
+        private readonly PersonalScoreRepository psr;
+        private static Achievement ach;
+        private AchievementsRepository ar;
         public BLayer()
         {
             pr = new PlayerRepository();
+            psr = new PersonalScoreRepository();
+            ar = new AchievementsRepository();
         }
 
         public bool PlayerLogIn(string username,string password)
@@ -25,6 +29,20 @@ namespace BusinessLayer
                     p.Username = pr.GetAllPlayers()[i].Username;
                     p.Password = pr.GetAllPlayers()[i].Password;
                     p.InGameName = pr.GetAllPlayers()[i].InGameName;
+                    List<Achievement> listAchar=ar.GetAchievements(p.PlayerID);
+                    if (listAchar.Count==0)
+                    {
+                    Achievement a = new Achievement();
+                    a.BetterThanAverageMoves = 0;
+                    a.BetterThanAverageTime =0;
+                    a.CompletedGame = 0;
+                    a.PA_ID = p.PlayerID;
+                    ar.InsertAchievement(a);
+                    }
+                    else
+                    {
+                        ach = listAchar[0];
+                    }
                     return true;
                 }
             }
@@ -38,21 +56,7 @@ namespace BusinessLayer
 
         public List<PersonalScore> getPlayerPersonalScores()
         {
-            List<PersonalScore> score = new List<PersonalScore>();
-            for(int i=0;i< psr.GetAllPersonalScores().Count; i++)
-            {
-                if (p.PlayerID == psr.GetAllPersonalScores()[i].PersonalScoreID)
-                {
-                    PersonalScore ps = new PersonalScore();
-                    ps.PersonalScoreID = psr.GetAllPersonalScores()[i].PersonalScoreID;
-                    ps.Score = psr.GetAllPersonalScores()[i].Score;
-                    ps.DateAndTime = psr.GetAllPersonalScores()[i].DateAndTime;
-                    ps.TimePlayed = psr.GetAllPersonalScores()[i].TimePlayed;
-                    ps.PL_ID = psr.GetAllPersonalScores()[i].PL_ID;
-                    score.Add(ps);
-                }
-            }
-            return score;
+            return psr.GetAllPersonalScores(p.PlayerID);
         }
         public bool insertPlayerScore(PersonalScore ps)
         {
@@ -64,13 +68,27 @@ namespace BusinessLayer
         public bool InsertNewPlayer(Player pl)
         {
             if (pr.InsertPlayer(pl) > 0)
+            {
+                
                 return true;
+            }
+                
             return false;
+        }
+
+        public void insertAchievement()
+        {
+            if (ar.UpdateAchievement(ach,p.PlayerID) > 0)
+            {}
         }
 
         public Player getPlayer()
         {
             return p;
+        }
+        public Achievement getAchievement()
+        {
+            return ach;
         }
     }
 }

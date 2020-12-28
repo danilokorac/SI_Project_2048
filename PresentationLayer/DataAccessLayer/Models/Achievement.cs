@@ -9,9 +9,9 @@ namespace DataAccessLayer.Models
     public class Achievement
     {
         public int AchievementID { get; set; }
-        public bool CompletedGame { get; set; }
-        public bool BetterThanAverageMoves { get; set; }
-        public bool BetterThanAverageTime { get; set; }
+        public int CompletedGame { get; set; }
+        public int BetterThanAverageMoves { get; set; }
+        public int BetterThanAverageTime { get; set; }
         public int PA_ID { get; set; }
     }
 }

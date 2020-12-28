@@ -14,18 +14,29 @@ namespace BusinessLayer
         public int Score { get; set; }
         public bool isGameOver { get; set; }
         BLayer databaseConfig = new BLayer();
+        private bool isInsertet;
         public GameMechanics()
         {
             moveCounter = 0;
             Score = 0;
             isGameOver = false;
+            isInsertet = false;
+
         }
         public void randomGenerator()
         {
+            if (gameCompleted())
+            {
+                updateAchivements();
+                return;
+            }
+
             int i, j, random;
             Random r = new Random();
             i = r.Next(4);
             j = r.Next(4);
+
+           
 
             if (!isBoardFull() && isMoved)
             {
@@ -55,9 +66,10 @@ namespace BusinessLayer
                     ps.TimePlayed = "UNKNOW";
                     ps.DateAndTime = DateTime.Now;
 
-                    if (databaseConfig.insertPlayerScore(ps))
+                    if (!isInsertet&&databaseConfig.insertPlayerScore(ps))
                     {
-
+                        isInsertet = true;
+                        updateAchivements();
                     }
                 }
                 
@@ -108,6 +120,18 @@ namespace BusinessLayer
                 moveCounter++;
         }
 
+        public bool gameCompleted()
+        {
+            for(int i = 0; i < 4; i++)
+            {
+                for(int j = 0; j < 4; j++)
+                {
+                    if (GameBoard[i, j] == 2048)
+                        return true;
+                }
+            }
+            return false;
+        }
         public void moveLeft()
         {
             for (int i = 0; i < 4; i++)
@@ -302,6 +326,36 @@ namespace BusinessLayer
             countMovies();
             randomGenerator();
         }
+
+        public void updateAchivements()
+        {
+            if (databaseConfig.getAchievement().BetterThanAverageMoves==0&&moveCounter >= 150) //izmeniti kasnije
+                databaseConfig.getAchievement().BetterThanAverageMoves = 1;
+            if (databaseConfig.getAchievement().BetterThanAverageTime == 0 && moveCounter >= 100) //izmeniti kada time bude dostupan
+                databaseConfig.getAchievement().BetterThanAverageTime = 1;
+            if (databaseConfig.getAchievement().CompletedGame == 0 && gameCompleted())
+                databaseConfig.getAchievement().CompletedGame = 1;
+
+                databaseConfig.insertAchievement();
+        }
+
+        public void restartGame()
+        {
+            for(int i = 0; i < 4; i++)
+            {
+                for (int j = 0; j < 4; j++)
+                {
+                    GameBoard[i, j] = 0;
+                }
+            }
+            moveCounter = 0;
+            Score = 0;
+            isGameOver = false;
+            isMoved = true;
+            isInsertet = false;
+        }
+
+
     }
 
 
