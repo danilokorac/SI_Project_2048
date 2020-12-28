@@ -42,7 +42,7 @@ namespace PresentationLayer
             button18.Text = "" + gameMechanics.GameBoard[3, 1];
             button19.Text = "" + gameMechanics.GameBoard[3, 2];
             button20.Text = "" + gameMechanics.GameBoard[3, 3];
-            
+
         }
         private void ResetColors()
         {
@@ -50,6 +50,13 @@ namespace PresentationLayer
             bunifuThinButtonUpW.ForeColor = Color.Black;
             bunifuThinButtonRightD.ForeColor = Color.Black;
             bunifuThinButtonDownS.ForeColor = Color.Black;
+        }
+        public void isGameOver()
+        {
+            if (gameMechanics.isGameOver == true)
+                MessageBox.Show("Game Over");
+                
+                
         }
       
         private void Game_KeyDown(object sender, KeyEventArgs e)
@@ -66,7 +73,9 @@ namespace PresentationLayer
                 {
                     timer1.Start();
                 }
-               
+                gameMechanics.timePlayed = labeltimer.Text;
+                isGameOver();
+                
 
             }
             else  if (e.KeyCode == Keys.Right || e.KeyCode == Keys.D)
@@ -81,7 +90,8 @@ namespace PresentationLayer
                 {
                     timer1.Start();
                 }
-               
+                gameMechanics.timePlayed = labeltimer.Text;
+                isGameOver();
             }
             else if (e.KeyCode == Keys.Up || e.KeyCode == Keys.W)
             {
@@ -95,7 +105,10 @@ namespace PresentationLayer
                 {
                     timer1.Start();
                 }
-                
+                gameMechanics.timePlayed = labeltimer.Text;
+                isGameOver();
+
+
             }
             else if (e.KeyCode == Keys.Down || e.KeyCode == Keys.S)
             {
@@ -110,7 +123,8 @@ namespace PresentationLayer
                 {
                     timer1.Start();
                 }
-                
+                gameMechanics.timePlayed = labeltimer.Text;
+                isGameOver();
             }
         }
 

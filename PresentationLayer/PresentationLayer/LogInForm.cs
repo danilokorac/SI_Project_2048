@@ -55,7 +55,8 @@ namespace PresentationLayer
         {
 
         }
-        public static Game playGame = new Game() { Dock = DockStyle.Fill, TopLevel = false, TopMost = true };
+        public static Game playGame = new Game() { Dock = DockStyle.Fill, TopLevel = true, TopMost = true };
+
         private void bunifuThinButtonLogIn_Click(object sender, EventArgs e)
         {
             string username = bunifuTextboxUsernameLogIn.text;
@@ -70,6 +71,7 @@ namespace PresentationLayer
             else
             {
                 MessageBox.Show("Player not found, please register first!");
+                
             }
         }
 

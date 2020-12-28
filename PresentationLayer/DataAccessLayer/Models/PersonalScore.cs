@@ -14,5 +14,12 @@ namespace DataAccessLayer.Models
         public int NumberOfMoves { get; set; }
         public string TimePlayed { get; set; }
         public int PL_ID { get; set; }
+
+
+        public String toString()
+        {
+            return "\t" + Score + "\t" + DateAndTime + "\t" + NumberOfMoves + "   \t" + TimePlayed;
+        }
     }
+
 }

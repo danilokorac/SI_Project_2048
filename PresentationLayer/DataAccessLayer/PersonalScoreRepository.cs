@@ -33,7 +33,7 @@ namespace DataAccessLayer
                 SqlCommand com = new SqlCommand();
                 com.Connection = con;
                 com.CommandText = string.Format("SELECT * FROM Personal_Scores" +
-                    "WHERE PL_ID = {0}", id);
+                    " WHERE PL_ID = {0}", id);
 
                 con.Open();
                 SqlDataReader dr = com.ExecuteReader();
@@ -46,7 +46,6 @@ namespace DataAccessLayer
                     ps1.DateAndTime = dr.GetDateTime(2);
                     ps1.NumberOfMoves = dr.GetInt32(3);
                     ps1.TimePlayed = dr.GetString(4);
-
                     ps.Add(ps1);
                 }
 

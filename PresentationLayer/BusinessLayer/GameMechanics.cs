@@ -15,6 +15,7 @@ namespace BusinessLayer
         public bool isGameOver { get; set; }
         BLayer databaseConfig = new BLayer();
         private bool isInsertet;
+        public string timePlayed { get; set; }
         public GameMechanics()
         {
             moveCounter = 0;
@@ -63,7 +64,7 @@ namespace BusinessLayer
                     ps.PL_ID = databaseConfig.getPlayer().PlayerID;
                     ps.Score = Score;
                     ps.NumberOfMoves = moveCounter;
-                    ps.TimePlayed = "UNKNOW";
+                    ps.TimePlayed = timePlayed;
                     ps.DateAndTime = DateTime.Now;
 
                     if (!isInsertet&&databaseConfig.insertPlayerScore(ps))

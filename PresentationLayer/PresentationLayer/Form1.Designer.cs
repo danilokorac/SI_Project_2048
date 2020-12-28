@@ -29,9 +29,9 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            BunifuAnimatorNS.Animation animation6 = new BunifuAnimatorNS.Animation();
-            BunifuAnimatorNS.Animation animation5 = new BunifuAnimatorNS.Animation();
+            BunifuAnimatorNS.Animation animation1 = new BunifuAnimatorNS.Animation();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
+            BunifuAnimatorNS.Animation animation2 = new BunifuAnimatorNS.Animation();
             this.NavbarTop = new System.Windows.Forms.Panel();
             this.NormalForm = new System.Windows.Forms.PictureBox();
             this.MinimizeForm = new System.Windows.Forms.PictureBox();
@@ -53,6 +53,7 @@
             this.bunifuElipseCurveSidebar = new Bunifu.Framework.UI.BunifuElipse(this.components);
             this.AnimationSidebar = new BunifuAnimatorNS.BunifuTransition(this.components);
             this.AnimationSidebarBack = new BunifuAnimatorNS.BunifuTransition(this.components);
+            this.bunifuFlatButtonPersonalScores = new Bunifu.Framework.UI.BunifuFlatButton();
             this.NavbarTop.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.NormalForm)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.MinimizeForm)).BeginInit();
@@ -185,6 +186,7 @@
             | System.Windows.Forms.AnchorStyles.Left)));
             this.Sidebar.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("Sidebar.BackgroundImage")));
             this.Sidebar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.Sidebar.Controls.Add(this.bunifuFlatButtonPersonalScores);
             this.Sidebar.Controls.Add(this.bunifuFlatButtonGame);
             this.Sidebar.Controls.Add(this.bunifuFlatButtonLogIn);
             this.Sidebar.Controls.Add(this.bunifuFlatButtonRegister);
@@ -414,43 +416,80 @@
             // 
             this.AnimationSidebar.AnimationType = BunifuAnimatorNS.AnimationType.Particles;
             this.AnimationSidebar.Cursor = null;
-            animation6.AnimateOnlyDifferences = true;
-            animation6.BlindCoeff = ((System.Drawing.PointF)(resources.GetObject("animation6.BlindCoeff")));
-            animation6.LeafCoeff = 0F;
-            animation6.MaxTime = 1F;
-            animation6.MinTime = 0F;
-            animation6.MosaicCoeff = ((System.Drawing.PointF)(resources.GetObject("animation6.MosaicCoeff")));
-            animation6.MosaicShift = ((System.Drawing.PointF)(resources.GetObject("animation6.MosaicShift")));
-            animation6.MosaicSize = 1;
-            animation6.Padding = new System.Windows.Forms.Padding(100, 50, 100, 150);
-            animation6.RotateCoeff = 0F;
-            animation6.RotateLimit = 0F;
-            animation6.ScaleCoeff = ((System.Drawing.PointF)(resources.GetObject("animation6.ScaleCoeff")));
-            animation6.SlideCoeff = ((System.Drawing.PointF)(resources.GetObject("animation6.SlideCoeff")));
-            animation6.TimeCoeff = 2F;
-            animation6.TransparencyCoeff = 0F;
-            this.AnimationSidebar.DefaultAnimation = animation6;
+            animation1.AnimateOnlyDifferences = true;
+            animation1.BlindCoeff = ((System.Drawing.PointF)(resources.GetObject("animation1.BlindCoeff")));
+            animation1.LeafCoeff = 0F;
+            animation1.MaxTime = 1F;
+            animation1.MinTime = 0F;
+            animation1.MosaicCoeff = ((System.Drawing.PointF)(resources.GetObject("animation1.MosaicCoeff")));
+            animation1.MosaicShift = ((System.Drawing.PointF)(resources.GetObject("animation1.MosaicShift")));
+            animation1.MosaicSize = 1;
+            animation1.Padding = new System.Windows.Forms.Padding(100, 50, 100, 150);
+            animation1.RotateCoeff = 0F;
+            animation1.RotateLimit = 0F;
+            animation1.ScaleCoeff = ((System.Drawing.PointF)(resources.GetObject("animation1.ScaleCoeff")));
+            animation1.SlideCoeff = ((System.Drawing.PointF)(resources.GetObject("animation1.SlideCoeff")));
+            animation1.TimeCoeff = 2F;
+            animation1.TransparencyCoeff = 0F;
+            this.AnimationSidebar.DefaultAnimation = animation1;
             // 
             // AnimationSidebarBack
             // 
             this.AnimationSidebarBack.AnimationType = BunifuAnimatorNS.AnimationType.HorizSlide;
             this.AnimationSidebarBack.Cursor = null;
-            animation5.AnimateOnlyDifferences = true;
-            animation5.BlindCoeff = ((System.Drawing.PointF)(resources.GetObject("animation5.BlindCoeff")));
-            animation5.LeafCoeff = 0F;
-            animation5.MaxTime = 1F;
-            animation5.MinTime = 0F;
-            animation5.MosaicCoeff = ((System.Drawing.PointF)(resources.GetObject("animation5.MosaicCoeff")));
-            animation5.MosaicShift = ((System.Drawing.PointF)(resources.GetObject("animation5.MosaicShift")));
-            animation5.MosaicSize = 0;
-            animation5.Padding = new System.Windows.Forms.Padding(0);
-            animation5.RotateCoeff = 0F;
-            animation5.RotateLimit = 0F;
-            animation5.ScaleCoeff = ((System.Drawing.PointF)(resources.GetObject("animation5.ScaleCoeff")));
-            animation5.SlideCoeff = ((System.Drawing.PointF)(resources.GetObject("animation5.SlideCoeff")));
-            animation5.TimeCoeff = 0F;
-            animation5.TransparencyCoeff = 0F;
-            this.AnimationSidebarBack.DefaultAnimation = animation5;
+            animation2.AnimateOnlyDifferences = true;
+            animation2.BlindCoeff = ((System.Drawing.PointF)(resources.GetObject("animation2.BlindCoeff")));
+            animation2.LeafCoeff = 0F;
+            animation2.MaxTime = 1F;
+            animation2.MinTime = 0F;
+            animation2.MosaicCoeff = ((System.Drawing.PointF)(resources.GetObject("animation2.MosaicCoeff")));
+            animation2.MosaicShift = ((System.Drawing.PointF)(resources.GetObject("animation2.MosaicShift")));
+            animation2.MosaicSize = 0;
+            animation2.Padding = new System.Windows.Forms.Padding(0);
+            animation2.RotateCoeff = 0F;
+            animation2.RotateLimit = 0F;
+            animation2.ScaleCoeff = ((System.Drawing.PointF)(resources.GetObject("animation2.ScaleCoeff")));
+            animation2.SlideCoeff = ((System.Drawing.PointF)(resources.GetObject("animation2.SlideCoeff")));
+            animation2.TimeCoeff = 0F;
+            animation2.TransparencyCoeff = 0F;
+            this.AnimationSidebarBack.DefaultAnimation = animation2;
+            // 
+            // bunifuFlatButtonPersonalScores
+            // 
+            this.bunifuFlatButtonPersonalScores.Activecolor = System.Drawing.Color.Transparent;
+            this.bunifuFlatButtonPersonalScores.BackColor = System.Drawing.Color.Transparent;
+            this.bunifuFlatButtonPersonalScores.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.bunifuFlatButtonPersonalScores.BorderRadius = 0;
+            this.bunifuFlatButtonPersonalScores.ButtonText = "       PERSONAL SCORES";
+            this.bunifuFlatButtonPersonalScores.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.AnimationSidebar.SetDecoration(this.bunifuFlatButtonPersonalScores, BunifuAnimatorNS.DecorationType.None);
+            this.AnimationSidebarBack.SetDecoration(this.bunifuFlatButtonPersonalScores, BunifuAnimatorNS.DecorationType.None);
+            this.bunifuFlatButtonPersonalScores.DisabledColor = System.Drawing.Color.Gray;
+            this.bunifuFlatButtonPersonalScores.Iconcolor = System.Drawing.Color.Transparent;
+            this.bunifuFlatButtonPersonalScores.Iconimage = ((System.Drawing.Image)(resources.GetObject("bunifuFlatButtonPersonalScores.Iconimage")));
+            this.bunifuFlatButtonPersonalScores.Iconimage_right = null;
+            this.bunifuFlatButtonPersonalScores.Iconimage_right_Selected = null;
+            this.bunifuFlatButtonPersonalScores.Iconimage_Selected = null;
+            this.bunifuFlatButtonPersonalScores.IconMarginLeft = 0;
+            this.bunifuFlatButtonPersonalScores.IconMarginRight = 0;
+            this.bunifuFlatButtonPersonalScores.IconRightVisible = true;
+            this.bunifuFlatButtonPersonalScores.IconRightZoom = 0D;
+            this.bunifuFlatButtonPersonalScores.IconVisible = true;
+            this.bunifuFlatButtonPersonalScores.IconZoom = 50D;
+            this.bunifuFlatButtonPersonalScores.IsTab = false;
+            this.bunifuFlatButtonPersonalScores.Location = new System.Drawing.Point(8, 303);
+            this.bunifuFlatButtonPersonalScores.Name = "bunifuFlatButtonPersonalScores";
+            this.bunifuFlatButtonPersonalScores.Normalcolor = System.Drawing.Color.Transparent;
+            this.bunifuFlatButtonPersonalScores.OnHovercolor = System.Drawing.Color.Transparent;
+            this.bunifuFlatButtonPersonalScores.OnHoverTextColor = System.Drawing.Color.White;
+            this.bunifuFlatButtonPersonalScores.selected = false;
+            this.bunifuFlatButtonPersonalScores.Size = new System.Drawing.Size(254, 48);
+            this.bunifuFlatButtonPersonalScores.TabIndex = 5;
+            this.bunifuFlatButtonPersonalScores.Text = "       PERSONAL SCORES";
+            this.bunifuFlatButtonPersonalScores.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.bunifuFlatButtonPersonalScores.Textcolor = System.Drawing.Color.LightGray;
+            this.bunifuFlatButtonPersonalScores.TextFont = new System.Drawing.Font("Nirmala UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bunifuFlatButtonPersonalScores.Click += new System.EventHandler(this.bunifuFlatButtonPersonalScores_Click);
             // 
             // MainForm
             // 
@@ -504,6 +543,7 @@
         private System.Windows.Forms.Label label2MainForm;
         private System.Windows.Forms.Panel panelForms;
         private Bunifu.Framework.UI.BunifuFlatButton bunifuFlatButtonGame;
+        private Bunifu.Framework.UI.BunifuFlatButton bunifuFlatButtonPersonalScores;
     }
 }
 
