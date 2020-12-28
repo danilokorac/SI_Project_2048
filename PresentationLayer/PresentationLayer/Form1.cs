@@ -85,6 +85,7 @@ namespace PresentationLayer
         public static LogInForm loginForm = new LogInForm() { Dock = DockStyle.Fill, TopLevel = false, TopMost = true };
         public static Game playGame = new Game() { Dock = DockStyle.Fill, TopLevel = false, TopMost = true };
         public static PersonalScores personalScores = new PersonalScores() { Dock = DockStyle.Fill, TopLevel = false, TopMost = true };
+        public static TopPlayers topPlayers = new TopPlayers() { Dock = DockStyle.Fill, TopLevel = false, TopMost = true };
         private void bunifuFlatButtonRegister_Click(object sender, EventArgs e)
         {
             panelForms.Visible = true;
@@ -151,6 +152,20 @@ namespace PresentationLayer
                 MessageBox.Show("You must ne logged in to se your personal scores!");
             
 
+        }
+
+        private void bunifuFlatButtonTopPlayers_Click(object sender, EventArgs e)
+        {
+            panelForms.Visible = true;
+            this.panelForms.Controls.Add(topPlayers);
+            registrationForm.Visible = false;
+            loginForm.Visible = false;
+            playGame.Visible = false;
+            personalScores.Visible = false;
+            topPlayers.Show();
+            labelMainFormText.Visible = false;
+            label2MainForm.Visible = false;
+            label3MainForm.Visible = false;
         }
     }
 }
