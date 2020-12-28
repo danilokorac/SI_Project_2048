@@ -86,6 +86,7 @@ namespace PresentationLayer
         public static Game playGame = new Game() { Dock = DockStyle.Fill, TopLevel = false, TopMost = true };
         public static PersonalScores personalScores = new PersonalScores() { Dock = DockStyle.Fill, TopLevel = false, TopMost = true };
         public static TopPlayers topPlayers = new TopPlayers() { Dock = DockStyle.Fill, TopLevel = false, TopMost = true };
+        public static Achievements achiv = new Achievements() { Dock = DockStyle.Fill, TopLevel = false, TopMost = true };
         private void bunifuFlatButtonRegister_Click(object sender, EventArgs e)
         {
             panelForms.Visible = true;
@@ -166,6 +167,27 @@ namespace PresentationLayer
             labelMainFormText.Visible = false;
             label2MainForm.Visible = false;
             label3MainForm.Visible = false;
+        }
+
+        private void bunifuFlatButton1_Click_1(object sender, EventArgs e)
+        {
+            if (loginForm.login == true)
+            {
+                panelForms.Visible = true;
+                this.panelForms.Controls.Add(achiv);
+                registrationForm.Visible = false;
+                loginForm.Visible = false;
+                playGame.Visible = false;
+                personalScores.Visible = false;
+                topPlayers.Visible = false;
+                achiv.Show();
+                labelMainFormText.Visible = false;
+                label2MainForm.Visible = false;
+                label3MainForm.Visible = false;
+            }
+            else
+                MessageBox.Show("You need to login first to see your Achievements!");
+           
         }
     }
 }

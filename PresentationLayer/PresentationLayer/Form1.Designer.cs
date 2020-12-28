@@ -29,9 +29,9 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            BunifuAnimatorNS.Animation animation1 = new BunifuAnimatorNS.Animation();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
-            BunifuAnimatorNS.Animation animation3 = new BunifuAnimatorNS.Animation();
-            BunifuAnimatorNS.Animation animation4 = new BunifuAnimatorNS.Animation();
+            BunifuAnimatorNS.Animation animation2 = new BunifuAnimatorNS.Animation();
             this.NavbarTop = new System.Windows.Forms.Panel();
             this.NormalForm = new System.Windows.Forms.PictureBox();
             this.MinimizeForm = new System.Windows.Forms.PictureBox();
@@ -41,6 +41,7 @@
             this.MenuSidebar = new System.Windows.Forms.PictureBox();
             this.SideWrapper = new System.Windows.Forms.Panel();
             this.Sidebar = new Bunifu.Framework.UI.BunifuGradientPanel();
+            this.bunifuFlatButtonTopPlayers = new Bunifu.Framework.UI.BunifuFlatButton();
             this.bunifuFlatButtonPersonalScores = new Bunifu.Framework.UI.BunifuFlatButton();
             this.bunifuFlatButtonGame = new Bunifu.Framework.UI.BunifuFlatButton();
             this.bunifuFlatButtonLogIn = new Bunifu.Framework.UI.BunifuFlatButton();
@@ -54,7 +55,7 @@
             this.bunifuElipseCurveSidebar = new Bunifu.Framework.UI.BunifuElipse(this.components);
             this.AnimationSidebar = new BunifuAnimatorNS.BunifuTransition(this.components);
             this.AnimationSidebarBack = new BunifuAnimatorNS.BunifuTransition(this.components);
-            this.bunifuFlatButtonTopPlayers = new Bunifu.Framework.UI.BunifuFlatButton();
+            this.bunifuFlatButton1 = new Bunifu.Framework.UI.BunifuFlatButton();
             this.NavbarTop.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.NormalForm)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.MinimizeForm)).BeginInit();
@@ -187,6 +188,7 @@
             | System.Windows.Forms.AnchorStyles.Left)));
             this.Sidebar.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("Sidebar.BackgroundImage")));
             this.Sidebar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.Sidebar.Controls.Add(this.bunifuFlatButton1);
             this.Sidebar.Controls.Add(this.bunifuFlatButtonTopPlayers);
             this.Sidebar.Controls.Add(this.bunifuFlatButtonPersonalScores);
             this.Sidebar.Controls.Add(this.bunifuFlatButtonGame);
@@ -204,6 +206,43 @@
             this.Sidebar.Quality = 10;
             this.Sidebar.Size = new System.Drawing.Size(270, 784);
             this.Sidebar.TabIndex = 0;
+            // 
+            // bunifuFlatButtonTopPlayers
+            // 
+            this.bunifuFlatButtonTopPlayers.Activecolor = System.Drawing.Color.Transparent;
+            this.bunifuFlatButtonTopPlayers.BackColor = System.Drawing.Color.Transparent;
+            this.bunifuFlatButtonTopPlayers.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.bunifuFlatButtonTopPlayers.BorderRadius = 0;
+            this.bunifuFlatButtonTopPlayers.ButtonText = "       TOP PLAYERS";
+            this.bunifuFlatButtonTopPlayers.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.AnimationSidebar.SetDecoration(this.bunifuFlatButtonTopPlayers, BunifuAnimatorNS.DecorationType.None);
+            this.AnimationSidebarBack.SetDecoration(this.bunifuFlatButtonTopPlayers, BunifuAnimatorNS.DecorationType.None);
+            this.bunifuFlatButtonTopPlayers.DisabledColor = System.Drawing.Color.Gray;
+            this.bunifuFlatButtonTopPlayers.Iconcolor = System.Drawing.Color.Transparent;
+            this.bunifuFlatButtonTopPlayers.Iconimage = ((System.Drawing.Image)(resources.GetObject("bunifuFlatButtonTopPlayers.Iconimage")));
+            this.bunifuFlatButtonTopPlayers.Iconimage_right = null;
+            this.bunifuFlatButtonTopPlayers.Iconimage_right_Selected = null;
+            this.bunifuFlatButtonTopPlayers.Iconimage_Selected = null;
+            this.bunifuFlatButtonTopPlayers.IconMarginLeft = 0;
+            this.bunifuFlatButtonTopPlayers.IconMarginRight = 0;
+            this.bunifuFlatButtonTopPlayers.IconRightVisible = true;
+            this.bunifuFlatButtonTopPlayers.IconRightZoom = 0D;
+            this.bunifuFlatButtonTopPlayers.IconVisible = true;
+            this.bunifuFlatButtonTopPlayers.IconZoom = 50D;
+            this.bunifuFlatButtonTopPlayers.IsTab = false;
+            this.bunifuFlatButtonTopPlayers.Location = new System.Drawing.Point(8, 357);
+            this.bunifuFlatButtonTopPlayers.Name = "bunifuFlatButtonTopPlayers";
+            this.bunifuFlatButtonTopPlayers.Normalcolor = System.Drawing.Color.Transparent;
+            this.bunifuFlatButtonTopPlayers.OnHovercolor = System.Drawing.Color.Transparent;
+            this.bunifuFlatButtonTopPlayers.OnHoverTextColor = System.Drawing.Color.White;
+            this.bunifuFlatButtonTopPlayers.selected = false;
+            this.bunifuFlatButtonTopPlayers.Size = new System.Drawing.Size(254, 48);
+            this.bunifuFlatButtonTopPlayers.TabIndex = 6;
+            this.bunifuFlatButtonTopPlayers.Text = "       TOP PLAYERS";
+            this.bunifuFlatButtonTopPlayers.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.bunifuFlatButtonTopPlayers.Textcolor = System.Drawing.Color.LightGray;
+            this.bunifuFlatButtonTopPlayers.TextFont = new System.Drawing.Font("Nirmala UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bunifuFlatButtonTopPlayers.Click += new System.EventHandler(this.bunifuFlatButtonTopPlayers_Click);
             // 
             // bunifuFlatButtonPersonalScores
             // 
@@ -455,80 +494,80 @@
             // 
             this.AnimationSidebar.AnimationType = BunifuAnimatorNS.AnimationType.Particles;
             this.AnimationSidebar.Cursor = null;
-            animation3.AnimateOnlyDifferences = true;
-            animation3.BlindCoeff = ((System.Drawing.PointF)(resources.GetObject("animation3.BlindCoeff")));
-            animation3.LeafCoeff = 0F;
-            animation3.MaxTime = 1F;
-            animation3.MinTime = 0F;
-            animation3.MosaicCoeff = ((System.Drawing.PointF)(resources.GetObject("animation3.MosaicCoeff")));
-            animation3.MosaicShift = ((System.Drawing.PointF)(resources.GetObject("animation3.MosaicShift")));
-            animation3.MosaicSize = 1;
-            animation3.Padding = new System.Windows.Forms.Padding(100, 50, 100, 150);
-            animation3.RotateCoeff = 0F;
-            animation3.RotateLimit = 0F;
-            animation3.ScaleCoeff = ((System.Drawing.PointF)(resources.GetObject("animation3.ScaleCoeff")));
-            animation3.SlideCoeff = ((System.Drawing.PointF)(resources.GetObject("animation3.SlideCoeff")));
-            animation3.TimeCoeff = 2F;
-            animation3.TransparencyCoeff = 0F;
-            this.AnimationSidebar.DefaultAnimation = animation3;
+            animation1.AnimateOnlyDifferences = true;
+            animation1.BlindCoeff = ((System.Drawing.PointF)(resources.GetObject("animation1.BlindCoeff")));
+            animation1.LeafCoeff = 0F;
+            animation1.MaxTime = 1F;
+            animation1.MinTime = 0F;
+            animation1.MosaicCoeff = ((System.Drawing.PointF)(resources.GetObject("animation1.MosaicCoeff")));
+            animation1.MosaicShift = ((System.Drawing.PointF)(resources.GetObject("animation1.MosaicShift")));
+            animation1.MosaicSize = 1;
+            animation1.Padding = new System.Windows.Forms.Padding(100, 50, 100, 150);
+            animation1.RotateCoeff = 0F;
+            animation1.RotateLimit = 0F;
+            animation1.ScaleCoeff = ((System.Drawing.PointF)(resources.GetObject("animation1.ScaleCoeff")));
+            animation1.SlideCoeff = ((System.Drawing.PointF)(resources.GetObject("animation1.SlideCoeff")));
+            animation1.TimeCoeff = 2F;
+            animation1.TransparencyCoeff = 0F;
+            this.AnimationSidebar.DefaultAnimation = animation1;
             // 
             // AnimationSidebarBack
             // 
             this.AnimationSidebarBack.AnimationType = BunifuAnimatorNS.AnimationType.HorizSlide;
             this.AnimationSidebarBack.Cursor = null;
-            animation4.AnimateOnlyDifferences = true;
-            animation4.BlindCoeff = ((System.Drawing.PointF)(resources.GetObject("animation4.BlindCoeff")));
-            animation4.LeafCoeff = 0F;
-            animation4.MaxTime = 1F;
-            animation4.MinTime = 0F;
-            animation4.MosaicCoeff = ((System.Drawing.PointF)(resources.GetObject("animation4.MosaicCoeff")));
-            animation4.MosaicShift = ((System.Drawing.PointF)(resources.GetObject("animation4.MosaicShift")));
-            animation4.MosaicSize = 0;
-            animation4.Padding = new System.Windows.Forms.Padding(0);
-            animation4.RotateCoeff = 0F;
-            animation4.RotateLimit = 0F;
-            animation4.ScaleCoeff = ((System.Drawing.PointF)(resources.GetObject("animation4.ScaleCoeff")));
-            animation4.SlideCoeff = ((System.Drawing.PointF)(resources.GetObject("animation4.SlideCoeff")));
-            animation4.TimeCoeff = 0F;
-            animation4.TransparencyCoeff = 0F;
-            this.AnimationSidebarBack.DefaultAnimation = animation4;
+            animation2.AnimateOnlyDifferences = true;
+            animation2.BlindCoeff = ((System.Drawing.PointF)(resources.GetObject("animation2.BlindCoeff")));
+            animation2.LeafCoeff = 0F;
+            animation2.MaxTime = 1F;
+            animation2.MinTime = 0F;
+            animation2.MosaicCoeff = ((System.Drawing.PointF)(resources.GetObject("animation2.MosaicCoeff")));
+            animation2.MosaicShift = ((System.Drawing.PointF)(resources.GetObject("animation2.MosaicShift")));
+            animation2.MosaicSize = 0;
+            animation2.Padding = new System.Windows.Forms.Padding(0);
+            animation2.RotateCoeff = 0F;
+            animation2.RotateLimit = 0F;
+            animation2.ScaleCoeff = ((System.Drawing.PointF)(resources.GetObject("animation2.ScaleCoeff")));
+            animation2.SlideCoeff = ((System.Drawing.PointF)(resources.GetObject("animation2.SlideCoeff")));
+            animation2.TimeCoeff = 0F;
+            animation2.TransparencyCoeff = 0F;
+            this.AnimationSidebarBack.DefaultAnimation = animation2;
             // 
-            // bunifuFlatButtonTopPlayers
+            // bunifuFlatButton1
             // 
-            this.bunifuFlatButtonTopPlayers.Activecolor = System.Drawing.Color.Transparent;
-            this.bunifuFlatButtonTopPlayers.BackColor = System.Drawing.Color.Transparent;
-            this.bunifuFlatButtonTopPlayers.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.bunifuFlatButtonTopPlayers.BorderRadius = 0;
-            this.bunifuFlatButtonTopPlayers.ButtonText = "       TOP PLAYERS";
-            this.bunifuFlatButtonTopPlayers.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.AnimationSidebar.SetDecoration(this.bunifuFlatButtonTopPlayers, BunifuAnimatorNS.DecorationType.None);
-            this.AnimationSidebarBack.SetDecoration(this.bunifuFlatButtonTopPlayers, BunifuAnimatorNS.DecorationType.None);
-            this.bunifuFlatButtonTopPlayers.DisabledColor = System.Drawing.Color.Gray;
-            this.bunifuFlatButtonTopPlayers.Iconcolor = System.Drawing.Color.Transparent;
-            this.bunifuFlatButtonTopPlayers.Iconimage = ((System.Drawing.Image)(resources.GetObject("bunifuFlatButtonTopPlayers.Iconimage")));
-            this.bunifuFlatButtonTopPlayers.Iconimage_right = null;
-            this.bunifuFlatButtonTopPlayers.Iconimage_right_Selected = null;
-            this.bunifuFlatButtonTopPlayers.Iconimage_Selected = null;
-            this.bunifuFlatButtonTopPlayers.IconMarginLeft = 0;
-            this.bunifuFlatButtonTopPlayers.IconMarginRight = 0;
-            this.bunifuFlatButtonTopPlayers.IconRightVisible = true;
-            this.bunifuFlatButtonTopPlayers.IconRightZoom = 0D;
-            this.bunifuFlatButtonTopPlayers.IconVisible = true;
-            this.bunifuFlatButtonTopPlayers.IconZoom = 50D;
-            this.bunifuFlatButtonTopPlayers.IsTab = false;
-            this.bunifuFlatButtonTopPlayers.Location = new System.Drawing.Point(8, 357);
-            this.bunifuFlatButtonTopPlayers.Name = "bunifuFlatButtonTopPlayers";
-            this.bunifuFlatButtonTopPlayers.Normalcolor = System.Drawing.Color.Transparent;
-            this.bunifuFlatButtonTopPlayers.OnHovercolor = System.Drawing.Color.Transparent;
-            this.bunifuFlatButtonTopPlayers.OnHoverTextColor = System.Drawing.Color.White;
-            this.bunifuFlatButtonTopPlayers.selected = false;
-            this.bunifuFlatButtonTopPlayers.Size = new System.Drawing.Size(254, 48);
-            this.bunifuFlatButtonTopPlayers.TabIndex = 6;
-            this.bunifuFlatButtonTopPlayers.Text = "       TOP PLAYERS";
-            this.bunifuFlatButtonTopPlayers.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.bunifuFlatButtonTopPlayers.Textcolor = System.Drawing.Color.LightGray;
-            this.bunifuFlatButtonTopPlayers.TextFont = new System.Drawing.Font("Nirmala UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bunifuFlatButtonTopPlayers.Click += new System.EventHandler(this.bunifuFlatButtonTopPlayers_Click);
+            this.bunifuFlatButton1.Activecolor = System.Drawing.Color.Transparent;
+            this.bunifuFlatButton1.BackColor = System.Drawing.Color.Transparent;
+            this.bunifuFlatButton1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.bunifuFlatButton1.BorderRadius = 0;
+            this.bunifuFlatButton1.ButtonText = "       ACHIEVEMENTS";
+            this.bunifuFlatButton1.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.AnimationSidebar.SetDecoration(this.bunifuFlatButton1, BunifuAnimatorNS.DecorationType.None);
+            this.AnimationSidebarBack.SetDecoration(this.bunifuFlatButton1, BunifuAnimatorNS.DecorationType.None);
+            this.bunifuFlatButton1.DisabledColor = System.Drawing.Color.Gray;
+            this.bunifuFlatButton1.Iconcolor = System.Drawing.Color.Transparent;
+            this.bunifuFlatButton1.Iconimage = ((System.Drawing.Image)(resources.GetObject("bunifuFlatButton1.Iconimage")));
+            this.bunifuFlatButton1.Iconimage_right = null;
+            this.bunifuFlatButton1.Iconimage_right_Selected = null;
+            this.bunifuFlatButton1.Iconimage_Selected = null;
+            this.bunifuFlatButton1.IconMarginLeft = 0;
+            this.bunifuFlatButton1.IconMarginRight = 0;
+            this.bunifuFlatButton1.IconRightVisible = true;
+            this.bunifuFlatButton1.IconRightZoom = 0D;
+            this.bunifuFlatButton1.IconVisible = true;
+            this.bunifuFlatButton1.IconZoom = 50D;
+            this.bunifuFlatButton1.IsTab = false;
+            this.bunifuFlatButton1.Location = new System.Drawing.Point(8, 411);
+            this.bunifuFlatButton1.Name = "bunifuFlatButton1";
+            this.bunifuFlatButton1.Normalcolor = System.Drawing.Color.Transparent;
+            this.bunifuFlatButton1.OnHovercolor = System.Drawing.Color.Transparent;
+            this.bunifuFlatButton1.OnHoverTextColor = System.Drawing.Color.White;
+            this.bunifuFlatButton1.selected = false;
+            this.bunifuFlatButton1.Size = new System.Drawing.Size(254, 48);
+            this.bunifuFlatButton1.TabIndex = 7;
+            this.bunifuFlatButton1.Text = "       ACHIEVEMENTS";
+            this.bunifuFlatButton1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.bunifuFlatButton1.Textcolor = System.Drawing.Color.LightGray;
+            this.bunifuFlatButton1.TextFont = new System.Drawing.Font("Nirmala UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bunifuFlatButton1.Click += new System.EventHandler(this.bunifuFlatButton1_Click_1);
             // 
             // MainForm
             // 
@@ -584,6 +623,7 @@
         private Bunifu.Framework.UI.BunifuFlatButton bunifuFlatButtonGame;
         private Bunifu.Framework.UI.BunifuFlatButton bunifuFlatButtonPersonalScores;
         private Bunifu.Framework.UI.BunifuFlatButton bunifuFlatButtonTopPlayers;
+        private Bunifu.Framework.UI.BunifuFlatButton bunifuFlatButton1;
     }
 }
 
