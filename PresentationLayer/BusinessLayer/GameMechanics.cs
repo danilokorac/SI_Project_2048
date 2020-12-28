@@ -25,10 +25,18 @@ namespace BusinessLayer
         }
         public void randomGenerator()
         {
+            if (gameCompleted())
+            {
+                updateAchivements();
+                return;
+            }
+
             int i, j, random;
             Random r = new Random();
             i = r.Next(4);
             j = r.Next(4);
+
+           
 
             if (!isBoardFull() && isMoved)
             {
@@ -63,9 +71,6 @@ namespace BusinessLayer
                         isInsertet = true;
                         updateAchivements();
                     }
-                }else if (gameCompleted())
-                {
-                    updateAchivements();
                 }
                 
 
@@ -324,9 +329,9 @@ namespace BusinessLayer
 
         public void updateAchivements()
         {
-            if (databaseConfig.getAchievement().BetterThanAverageMoves==0&&moveCounter >= 1500) //izmeniti kasnije
+            if (databaseConfig.getAchievement().BetterThanAverageMoves==0&&moveCounter >= 150) //izmeniti kasnije
                 databaseConfig.getAchievement().BetterThanAverageMoves = 1;
-            if (databaseConfig.getAchievement().BetterThanAverageTime == 0 && moveCounter >= 1500) //izmeniti kada time bude dostupan
+            if (databaseConfig.getAchievement().BetterThanAverageTime == 0 && moveCounter >= 100) //izmeniti kada time bude dostupan
                 databaseConfig.getAchievement().BetterThanAverageTime = 1;
             if (databaseConfig.getAchievement().CompletedGame == 0 && gameCompleted())
                 databaseConfig.getAchievement().CompletedGame = 1;
