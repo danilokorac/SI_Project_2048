@@ -38,6 +38,7 @@ namespace BusinessLayer
                     a.CompletedGame = 0;
                     a.PA_ID = p.PlayerID;
                     ar.InsertAchievement(a);
+                        ach = a;
                     }
                     else
                     {
@@ -54,10 +55,16 @@ namespace BusinessLayer
             return pr.GetAllPlayers();
         }
 
+        public List<JoinTopPlayers> GetTopPlayers()
+        {
+            return psr.GetTopPlayers();
+        }
+
         public List<PersonalScore> getPlayerPersonalScores()
         {
             return psr.GetAllPersonalScores(p.PlayerID);
         }
+  
         public bool insertPlayerScore(PersonalScore ps)
         {
             if (psr.InsertPersonalScore(ps) > 0)

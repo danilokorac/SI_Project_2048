@@ -67,6 +67,12 @@ namespace PresentationLayer
             pl.Password = bunifuTextboxPassword.text;
             pl.InGameName = bunifuTextboxIGN.text;
 
+            if(bl.GetPlayerList().Where(s => s.Username == pl.Username || s.InGameName == pl.InGameName).ToList().Count > 0)
+            {
+                MessageBox.Show("This user already exists in database!");
+                return;
+            }
+
             if (bl.InsertNewPlayer(pl))
                 MessageBox.Show("Player is inserted in DB"); 
             else

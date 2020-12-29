@@ -23,6 +23,10 @@ namespace PresentationLayer
         private void MainForm_Load(object sender, EventArgs e)
         {
             panelForms.Visible = false;
+            NormalForm.Enabled = false;
+            MaximizeForm.Enabled = false;
+            MenuSidebar.Enabled = false;
+            
         }
         private void NavbarTop_MouseMove(object sender, MouseEventArgs e)
         {
@@ -84,12 +88,19 @@ namespace PresentationLayer
         public static RegistrationForm registrationForm = new RegistrationForm() { Dock = DockStyle.Fill, TopLevel = false, TopMost = true };
         public static LogInForm loginForm = new LogInForm() { Dock = DockStyle.Fill, TopLevel = false, TopMost = true };
         public static Game playGame = new Game() { Dock = DockStyle.Fill, TopLevel = false, TopMost = true };
+        public static PersonalScores personalScores = new PersonalScores() { Dock = DockStyle.Fill, TopLevel = false, TopMost = true };
+        public static TopPlayers topPlayers = new TopPlayers() { Dock = DockStyle.Fill, TopLevel = false, TopMost = true };
+        public static Achievements achiv = new Achievements() { Dock = DockStyle.Fill, TopLevel = false, TopMost = true };
+        public static About about = new About() { Dock = DockStyle.Fill, TopLevel = false, TopMost = true };
         private void bunifuFlatButtonRegister_Click(object sender, EventArgs e)
         {
             panelForms.Visible = true;
             this.panelForms.Controls.Add(registrationForm);
             loginForm.Visible = false;
             playGame.Visible = false;
+            personalScores.Visible = false;
+            topPlayers.Visible = false;
+            achiv.Visible = false;
             registrationForm.Show();
             labelMainFormText.Visible = false;
             label2MainForm.Visible = false;
@@ -101,6 +112,9 @@ namespace PresentationLayer
             this.panelForms.Controls.Add(loginForm);
             registrationForm.Visible = false;
             playGame.Visible = false;
+            personalScores.Visible = false;
+            topPlayers.Visible = false;
+            achiv.Visible = false;
             loginForm.Show();
             if(loginForm.login == true)
             {
@@ -118,20 +132,102 @@ namespace PresentationLayer
             label3MainForm.Visible = false;
             bunifuFlatButtonLogIn.Enabled = false;
 
-
-
         }
         private void bunifuFlatButton1_Click(object sender, EventArgs e)
         {
+            if(loginForm.login == true)
+            {
+                panelForms.Visible = true;
+                this.panelForms.Controls.Add(playGame);
+                registrationForm.Visible = false;
+                loginForm.Visible = false;
+                personalScores.Visible = false;
+                topPlayers.Visible = false;
+                achiv.Visible = false;
+                playGame.Show();
+                labelMainFormText.Visible = false;
+                label2MainForm.Visible = false;
+                label3MainForm.Visible = false;
+            }
+            else
+                MessageBox.Show("You must be logged in to play the game!");
+
+
+        }
+
+        private void bunifuFlatButtonPersonalScores_Click(object sender, EventArgs e)
+        {
+            if (loginForm.login == true)
+            {
+                panelForms.Visible = true;
+                this.panelForms.Controls.Add(personalScores);
+                registrationForm.Visible = false;
+                loginForm.Visible = false;
+                playGame.Visible = false;
+                topPlayers.Visible = false;
+                achiv.Visible = false;
+                personalScores.Show();
+                labelMainFormText.Visible = false;
+                label2MainForm.Visible = false;
+                label3MainForm.Visible = false;
+            }
+            else
+                MessageBox.Show("You must be logged in to se your personal scores!");
+            
+
+        }
+
+        private void bunifuFlatButtonTopPlayers_Click(object sender, EventArgs e)
+        {
             panelForms.Visible = true;
-            this.panelForms.Controls.Add(playGame);
+            this.panelForms.Controls.Add(topPlayers);
             registrationForm.Visible = false;
             loginForm.Visible = false;
-            playGame.Show();
+            playGame.Visible = false;
+            personalScores.Visible = false;
+            achiv.Visible = false;
+            personalScores.Visible = false;
+            topPlayers.Show();
             labelMainFormText.Visible = false;
             label2MainForm.Visible = false;
             label3MainForm.Visible = false;
+        }
 
+        private void bunifuFlatButton1_Click_1(object sender, EventArgs e)
+        {
+            if (loginForm.login == true)
+            {
+                panelForms.Visible = true;
+                this.panelForms.Controls.Add(achiv);
+                registrationForm.Visible = false;
+                loginForm.Visible = false;
+                playGame.Visible = false;
+                personalScores.Visible = false;
+                topPlayers.Visible = false;
+                achiv.Show();
+                labelMainFormText.Visible = false;
+                label2MainForm.Visible = false;
+                label3MainForm.Visible = false;
+            }
+            else
+                MessageBox.Show("You must be logged in to see your Achievements!");
+           
+        }
+
+        private void bunifuFlatButton2_Click(object sender, EventArgs e)
+        {
+            panelForms.Visible = true;
+            this.panelForms.Controls.Add(about);
+            registrationForm.Visible = false;
+            loginForm.Visible = false;
+            playGame.Visible = false;
+            personalScores.Visible = false;
+            topPlayers.Visible = false;
+            achiv.Visible = false;
+            about.Show();
+            labelMainFormText.Visible = false;
+            label2MainForm.Visible = false;
+            label3MainForm.Visible = false;
         }
     }
 }

@@ -46,7 +46,6 @@ namespace DataAccessLayer
             {
                 string commandText = string.Format("INSERT INTO Players VALUES( '{0}', '{1}', '{2}')", p.Username, p.Password, p.InGameName);
                 SqlCommand com = new SqlCommand(commandText, con);
-
                 con.Open();
                 result = com.ExecuteNonQuery();
             }

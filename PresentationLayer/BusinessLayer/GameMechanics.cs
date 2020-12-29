@@ -8,25 +8,40 @@ namespace BusinessLayer
 
     public class GameMechanics
     {
-        public int[,] GameBoard = { { 0, 0, 0, 0 }, { 0, 0, 0, 0 }, { 0, 0, 0, 0 }, { 0, 0,0, 0 } };
+        public int[,] GameBoard = { { 512, 512, 512, 512 }, { 0, 0, 0, 0 }, { 0, 0, 0, 0 }, { 0, 0,0, 0 } };
         private bool isMoved = true;
         public int moveCounter { get; set; }
         public int Score { get; set; }
         public bool isGameOver { get; set; }
+        public bool isGameComplete { get; set; }
         BLayer databaseConfig = new BLayer();
         private bool isInsertet;
+        public string timePlayed { get; set; }
         public GameMechanics()
         {
             moveCounter = 0;
             Score = 0;
             isGameOver = false;
             isInsertet = false;
-
+            isGameComplete = false;
         }
         public void randomGenerator()
         {
             if (gameCompleted())
             {
+               
+                PersonalScore ps = new PersonalScore();
+                ps.PL_ID = databaseConfig.getPlayer().PlayerID;
+                ps.Score = Score;
+                ps.NumberOfMoves = moveCounter;
+                ps.TimePlayed = timePlayed;
+                ps.DateAndTime = DateTime.Now;
+
+                if (!isInsertet && databaseConfig.insertPlayerScore(ps))
+                {
+                    isInsertet = true;
+                }
+                isGameComplete = true;
                 updateAchivements();
                 return;
             }
@@ -58,19 +73,19 @@ namespace BusinessLayer
             {
                 if (gameOver())
                 {
-                    isGameOver = true;
+                    
                     PersonalScore ps = new PersonalScore();
                     ps.PL_ID = databaseConfig.getPlayer().PlayerID;
                     ps.Score = Score;
                     ps.NumberOfMoves = moveCounter;
-                    ps.TimePlayed = "UNKNOW";
+                    ps.TimePlayed = timePlayed;
                     ps.DateAndTime = DateTime.Now;
 
                     if (!isInsertet&&databaseConfig.insertPlayerScore(ps))
                     {
                         isInsertet = true;
-                        updateAchivements();
                     }
+                    isGameOver = true;
                 }
                 
 
@@ -126,7 +141,7 @@ namespace BusinessLayer
             {
                 for(int j = 0; j < 4; j++)
                 {
-                    if (GameBoard[i, j] == 2048)
+                    if (GameBoard[i, j] >= 2048)
                         return true;
                 }
             }
@@ -329,9 +344,9 @@ namespace BusinessLayer
 
         public void updateAchivements()
         {
-            if (databaseConfig.getAchievement().BetterThanAverageMoves==0&&moveCounter >= 150) //izmeniti kasnije
+            if (databaseConfig.getAchievement().BetterThanAverageMoves==0&&moveCounter <= 150) //izmeniti kasnije
                 databaseConfig.getAchievement().BetterThanAverageMoves = 1;
-            if (databaseConfig.getAchievement().BetterThanAverageTime == 0 && moveCounter >= 100) //izmeniti kada time bude dostupan
+            if (databaseConfig.getAchievement().BetterThanAverageTime == 0 && moveCounter <= 100) //izmeniti kada time bude dostupan
                 databaseConfig.getAchievement().BetterThanAverageTime = 1;
             if (databaseConfig.getAchievement().CompletedGame == 0 && gameCompleted())
                 databaseConfig.getAchievement().CompletedGame = 1;
