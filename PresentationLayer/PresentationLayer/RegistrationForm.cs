@@ -67,6 +67,13 @@ namespace PresentationLayer
             pl.Password = bunifuTextboxPassword.text;
             pl.InGameName = bunifuTextboxIGN.text;
 
+            if (bunifuTextboxIGN.text.Length >= 6)
+            {
+                MessageBox.Show("In Game Name must be 6 or less characters long!");
+                return;
+            }
+                
+
             if(bl.GetPlayerList().Where(s => s.Username == pl.Username || s.InGameName == pl.InGameName).ToList().Count > 0)
             {
                 MessageBox.Show("This user already exists in database!");

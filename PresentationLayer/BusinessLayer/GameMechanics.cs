@@ -368,6 +368,7 @@ namespace BusinessLayer
             isGameOver = false;
             isMoved = true;
             isInsertet = false;
+            isGameComplete = false;
         }
 
 
