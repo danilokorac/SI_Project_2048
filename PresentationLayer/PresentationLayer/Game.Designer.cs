@@ -112,9 +112,9 @@
             this.button14.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button14.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button14.ForeColor = System.Drawing.Color.White;
-            this.button14.Location = new System.Drawing.Point(441, 375);
+            this.button14.Location = new System.Drawing.Point(431, 365);
             this.button14.Name = "button14";
-            this.button14.Size = new System.Drawing.Size(60, 60);
+            this.button14.Size = new System.Drawing.Size(74, 71);
             this.button14.TabIndex = 45;
             this.button14.UseVisualStyleBackColor = false;
             // 
@@ -126,9 +126,9 @@
             this.button15.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button15.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button15.ForeColor = System.Drawing.Color.White;
-            this.button15.Location = new System.Drawing.Point(511, 375);
+            this.button15.Location = new System.Drawing.Point(511, 365);
             this.button15.Name = "button15";
-            this.button15.Size = new System.Drawing.Size(60, 60);
+            this.button15.Size = new System.Drawing.Size(74, 71);
             this.button15.TabIndex = 46;
             this.button15.UseVisualStyleBackColor = false;
             // 
@@ -140,9 +140,9 @@
             this.button13.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button13.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button13.ForeColor = System.Drawing.Color.White;
-            this.button13.Location = new System.Drawing.Point(374, 375);
+            this.button13.Location = new System.Drawing.Point(351, 365);
             this.button13.Name = "button13";
-            this.button13.Size = new System.Drawing.Size(60, 60);
+            this.button13.Size = new System.Drawing.Size(74, 71);
             this.button13.TabIndex = 44;
             this.button13.UseVisualStyleBackColor = false;
             // 
@@ -154,9 +154,9 @@
             this.button16.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button16.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button16.ForeColor = System.Drawing.Color.White;
-            this.button16.Location = new System.Drawing.Point(581, 375);
+            this.button16.Location = new System.Drawing.Point(591, 365);
             this.button16.Name = "button16";
-            this.button16.Size = new System.Drawing.Size(60, 60);
+            this.button16.Size = new System.Drawing.Size(74, 71);
             this.button16.TabIndex = 47;
             this.button16.UseVisualStyleBackColor = false;
             // 
@@ -168,9 +168,9 @@
             this.button12.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button12.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button12.ForeColor = System.Drawing.Color.White;
-            this.button12.Location = new System.Drawing.Point(581, 307);
+            this.button12.Location = new System.Drawing.Point(591, 288);
             this.button12.Name = "button12";
-            this.button12.Size = new System.Drawing.Size(60, 60);
+            this.button12.Size = new System.Drawing.Size(74, 71);
             this.button12.TabIndex = 43;
             this.button12.UseVisualStyleBackColor = false;
             // 
@@ -182,9 +182,9 @@
             this.button17.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button17.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button17.ForeColor = System.Drawing.Color.White;
-            this.button17.Location = new System.Drawing.Point(374, 442);
+            this.button17.Location = new System.Drawing.Point(351, 442);
             this.button17.Name = "button17";
-            this.button17.Size = new System.Drawing.Size(60, 60);
+            this.button17.Size = new System.Drawing.Size(74, 71);
             this.button17.TabIndex = 48;
             this.button17.UseVisualStyleBackColor = false;
             // 
@@ -196,9 +196,9 @@
             this.button11.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button11.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button11.ForeColor = System.Drawing.Color.White;
-            this.button11.Location = new System.Drawing.Point(511, 309);
+            this.button11.Location = new System.Drawing.Point(511, 288);
             this.button11.Name = "button11";
-            this.button11.Size = new System.Drawing.Size(60, 60);
+            this.button11.Size = new System.Drawing.Size(74, 71);
             this.button11.TabIndex = 42;
             this.button11.UseVisualStyleBackColor = false;
             // 
@@ -210,9 +210,9 @@
             this.button18.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button18.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button18.ForeColor = System.Drawing.Color.White;
-            this.button18.Location = new System.Drawing.Point(441, 442);
+            this.button18.Location = new System.Drawing.Point(431, 442);
             this.button18.Name = "button18";
-            this.button18.Size = new System.Drawing.Size(60, 60);
+            this.button18.Size = new System.Drawing.Size(74, 71);
             this.button18.TabIndex = 49;
             this.button18.UseVisualStyleBackColor = false;
             // 
@@ -224,9 +224,9 @@
             this.button10.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button10.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button10.ForeColor = System.Drawing.Color.White;
-            this.button10.Location = new System.Drawing.Point(441, 307);
+            this.button10.Location = new System.Drawing.Point(431, 288);
             this.button10.Name = "button10";
-            this.button10.Size = new System.Drawing.Size(60, 60);
+            this.button10.Size = new System.Drawing.Size(74, 71);
             this.button10.TabIndex = 41;
             this.button10.UseVisualStyleBackColor = false;
             // 
@@ -240,7 +240,7 @@
             this.button19.ForeColor = System.Drawing.Color.White;
             this.button19.Location = new System.Drawing.Point(511, 442);
             this.button19.Name = "button19";
-            this.button19.Size = new System.Drawing.Size(60, 60);
+            this.button19.Size = new System.Drawing.Size(74, 71);
             this.button19.TabIndex = 50;
             this.button19.UseVisualStyleBackColor = false;
             // 
@@ -252,9 +252,9 @@
             this.button9.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button9.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button9.ForeColor = System.Drawing.Color.White;
-            this.button9.Location = new System.Drawing.Point(374, 307);
+            this.button9.Location = new System.Drawing.Point(351, 288);
             this.button9.Name = "button9";
-            this.button9.Size = new System.Drawing.Size(60, 60);
+            this.button9.Size = new System.Drawing.Size(74, 71);
             this.button9.TabIndex = 40;
             this.button9.UseVisualStyleBackColor = false;
             // 
@@ -266,9 +266,9 @@
             this.button8.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button8.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button8.ForeColor = System.Drawing.Color.White;
-            this.button8.Location = new System.Drawing.Point(581, 236);
+            this.button8.Location = new System.Drawing.Point(591, 211);
             this.button8.Name = "button8";
-            this.button8.Size = new System.Drawing.Size(60, 60);
+            this.button8.Size = new System.Drawing.Size(74, 71);
             this.button8.TabIndex = 39;
             this.button8.UseVisualStyleBackColor = false;
             // 
@@ -280,9 +280,9 @@
             this.button7.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button7.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button7.ForeColor = System.Drawing.Color.White;
-            this.button7.Location = new System.Drawing.Point(511, 236);
+            this.button7.Location = new System.Drawing.Point(511, 211);
             this.button7.Name = "button7";
-            this.button7.Size = new System.Drawing.Size(60, 60);
+            this.button7.Size = new System.Drawing.Size(74, 71);
             this.button7.TabIndex = 38;
             this.button7.UseVisualStyleBackColor = false;
             // 
@@ -294,9 +294,9 @@
             this.button6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button6.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button6.ForeColor = System.Drawing.Color.White;
-            this.button6.Location = new System.Drawing.Point(441, 236);
+            this.button6.Location = new System.Drawing.Point(431, 211);
             this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(60, 60);
+            this.button6.Size = new System.Drawing.Size(74, 71);
             this.button6.TabIndex = 37;
             this.button6.UseVisualStyleBackColor = false;
             // 
@@ -308,9 +308,9 @@
             this.button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button5.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button5.ForeColor = System.Drawing.Color.White;
-            this.button5.Location = new System.Drawing.Point(374, 236);
+            this.button5.Location = new System.Drawing.Point(351, 211);
             this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(60, 60);
+            this.button5.Size = new System.Drawing.Size(74, 71);
             this.button5.TabIndex = 36;
             this.button5.Tag = "";
             this.button5.UseVisualStyleBackColor = false;
@@ -323,9 +323,9 @@
             this.button20.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button20.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button20.ForeColor = System.Drawing.Color.White;
-            this.button20.Location = new System.Drawing.Point(581, 442);
+            this.button20.Location = new System.Drawing.Point(591, 442);
             this.button20.Name = "button20";
-            this.button20.Size = new System.Drawing.Size(60, 60);
+            this.button20.Size = new System.Drawing.Size(74, 71);
             this.button20.TabIndex = 51;
             this.button20.UseVisualStyleBackColor = false;
             // 
@@ -348,7 +348,7 @@
             this.bunifuThinButtonLeftA.IdleFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(165)))), ((int)(((byte)(21)))), ((int)(((byte)(80)))));
             this.bunifuThinButtonLeftA.IdleForecolor = System.Drawing.Color.Black;
             this.bunifuThinButtonLeftA.IdleLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(41)))), ((int)(((byte)(61)))));
-            this.bunifuThinButtonLeftA.Location = new System.Drawing.Point(408, 585);
+            this.bunifuThinButtonLeftA.Location = new System.Drawing.Point(411, 596);
             this.bunifuThinButtonLeftA.Margin = new System.Windows.Forms.Padding(5);
             this.bunifuThinButtonLeftA.Name = "bunifuThinButtonLeftA";
             this.bunifuThinButtonLeftA.Size = new System.Drawing.Size(60, 50);
@@ -374,7 +374,7 @@
             this.bunifuThinButtonUpW.IdleFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(165)))), ((int)(((byte)(21)))), ((int)(((byte)(80)))));
             this.bunifuThinButtonUpW.IdleForecolor = System.Drawing.Color.Black;
             this.bunifuThinButtonUpW.IdleLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(41)))), ((int)(((byte)(61)))));
-            this.bunifuThinButtonUpW.Location = new System.Drawing.Point(479, 542);
+            this.bunifuThinButtonUpW.Location = new System.Drawing.Point(482, 553);
             this.bunifuThinButtonUpW.Margin = new System.Windows.Forms.Padding(5);
             this.bunifuThinButtonUpW.Name = "bunifuThinButtonUpW";
             this.bunifuThinButtonUpW.Size = new System.Drawing.Size(60, 50);
@@ -400,7 +400,7 @@
             this.bunifuThinButtonRightD.IdleFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(165)))), ((int)(((byte)(21)))), ((int)(((byte)(80)))));
             this.bunifuThinButtonRightD.IdleForecolor = System.Drawing.Color.Black;
             this.bunifuThinButtonRightD.IdleLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(41)))), ((int)(((byte)(61)))));
-            this.bunifuThinButtonRightD.Location = new System.Drawing.Point(548, 585);
+            this.bunifuThinButtonRightD.Location = new System.Drawing.Point(551, 596);
             this.bunifuThinButtonRightD.Margin = new System.Windows.Forms.Padding(6);
             this.bunifuThinButtonRightD.Name = "bunifuThinButtonRightD";
             this.bunifuThinButtonRightD.Size = new System.Drawing.Size(60, 50);
@@ -426,7 +426,7 @@
             this.bunifuThinButtonDownS.IdleFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(165)))), ((int)(((byte)(21)))), ((int)(((byte)(80)))));
             this.bunifuThinButtonDownS.IdleForecolor = System.Drawing.Color.Black;
             this.bunifuThinButtonDownS.IdleLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(41)))), ((int)(((byte)(61)))));
-            this.bunifuThinButtonDownS.Location = new System.Drawing.Point(478, 624);
+            this.bunifuThinButtonDownS.Location = new System.Drawing.Point(481, 635);
             this.bunifuThinButtonDownS.Margin = new System.Windows.Forms.Padding(6);
             this.bunifuThinButtonDownS.Name = "bunifuThinButtonDownS";
             this.bunifuThinButtonDownS.Size = new System.Drawing.Size(60, 50);

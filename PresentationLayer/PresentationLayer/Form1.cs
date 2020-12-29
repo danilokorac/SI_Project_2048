@@ -101,6 +101,7 @@ namespace PresentationLayer
             personalScores.Visible = false;
             topPlayers.Visible = false;
             achiv.Visible = false;
+            about.Visible = false;
             registrationForm.Show();
             labelMainFormText.Visible = false;
             label2MainForm.Visible = false;
@@ -118,6 +119,7 @@ namespace PresentationLayer
             loginForm.Show();
             if(loginForm.login == true)
             {
+                bunifuFlatButtonRegister.Enabled = false;
                 panelForms.Visible = true;
                 this.panelForms.Controls.Add(playGame);
                 registrationForm.Visible = false;
@@ -126,7 +128,9 @@ namespace PresentationLayer
                 labelMainFormText.Visible = false;
                 label2MainForm.Visible = false;
                 label3MainForm.Visible = false;
+               
             }
+            
             labelMainFormText.Visible = false;
             label2MainForm.Visible = false;
             label3MainForm.Visible = false;
@@ -186,7 +190,7 @@ namespace PresentationLayer
             playGame.Visible = false;
             personalScores.Visible = false;
             achiv.Visible = false;
-            personalScores.Visible = false;
+            about.Visible = false;
             topPlayers.Show();
             labelMainFormText.Visible = false;
             label2MainForm.Visible = false;
@@ -204,6 +208,7 @@ namespace PresentationLayer
                 playGame.Visible = false;
                 personalScores.Visible = false;
                 topPlayers.Visible = false;
+                about.Visible = false;
                 achiv.Show();
                 labelMainFormText.Visible = false;
                 label2MainForm.Visible = false;
