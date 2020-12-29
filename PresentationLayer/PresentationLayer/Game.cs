@@ -54,7 +54,17 @@ namespace PresentationLayer
         public void isGameOver()
         {
             if (gameMechanics.isGameOver == true)
+            {
+                timer1.Stop();
                 MessageBox.Show("Game Over");
+            }
+            else if(gameMechanics.isGameComplete == true)
+            {
+                timer1.Stop();
+                MessageBox.Show("Congratulation! You've won the game");
+            }
+                
+                
                 
                 
         }
@@ -73,9 +83,10 @@ namespace PresentationLayer
                 {
                     timer1.Start();
                 }
-                gameMechanics.timePlayed = labeltimer.Text;
                 isGameOver();
-                
+                gameMechanics.timePlayed = labeltimer.Text;
+
+
 
             }
             else  if (e.KeyCode == Keys.Right || e.KeyCode == Keys.D)
@@ -90,8 +101,8 @@ namespace PresentationLayer
                 {
                     timer1.Start();
                 }
-                gameMechanics.timePlayed = labeltimer.Text;
                 isGameOver();
+                gameMechanics.timePlayed = labeltimer.Text;
             }
             else if (e.KeyCode == Keys.Up || e.KeyCode == Keys.W)
             {
@@ -105,8 +116,8 @@ namespace PresentationLayer
                 {
                     timer1.Start();
                 }
-                gameMechanics.timePlayed = labeltimer.Text;
                 isGameOver();
+                gameMechanics.timePlayed = labeltimer.Text;
 
 
             }
@@ -123,8 +134,8 @@ namespace PresentationLayer
                 {
                     timer1.Start();
                 }
-                gameMechanics.timePlayed = labeltimer.Text;
                 isGameOver();
+                gameMechanics.timePlayed = labeltimer.Text;
             }
         }
 

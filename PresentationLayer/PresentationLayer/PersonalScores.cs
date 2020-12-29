@@ -15,7 +15,6 @@ namespace PresentationLayer
     {
         private GameMechanics gameMechanics;
         private BLayer bLayer;
-        public static string username = "John Doe";
         public PersonalScores()
         {
             this.gameMechanics = new GameMechanics();
