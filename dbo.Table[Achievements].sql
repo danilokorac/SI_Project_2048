@@ -1,8 +1,10 @@
-﻿CREATE TABLE [dbo].[Achievements]
-(
-	[PlayerID] INT NOT NULL PRIMARY KEY IDENTITY, 
-    [CompletedGame] BIT NULL, 
-    [BetterThanAverageMoves] BIT NULL, 
-    [BetterThanAverageTime] BIT NULL, 
-    CONSTRAINT [FK_Achievements_Personal_Scores] FOREIGN KEY ([PlayerID]) REFERENCES [Personal_Scores]([PlayerID])
-)
+﻿CREATE TABLE [dbo].[Achievements] (
+    [AchievementID]          INT IDENTITY (1, 1) NOT NULL,
+    [CompletedGame]          BIT NOT NULL,
+    [BetterThanAverageMoves] BIT NOT NULL,
+    [BetterThanAverageTime]  BIT NOT NULL,
+    [PA_ID]                  INT NOT NULL,
+    PRIMARY KEY CLUSTERED ([AchievementID] ASC),
+    CONSTRAINT [FK_Achievements_Players] FOREIGN KEY ([PA_ID]) REFERENCES [dbo].[Players] ([PlayerID])
+);
+
